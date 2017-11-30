@@ -1,0 +1,12 @@
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.DrawerHeader">
+	<ContentView.Content>
+		<Grid HeightRequest="700"  WidthRequest="700" BackgroundColor="#1aa1d6">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="120"/>
+				<RowDefinition Height="30"/>
+			</Grid.RowDefinitions>
+			<Image Source="user.png" Grid.Row="0" x:Name="userImage" BackgroundColor="#1aa1d6" HorizontalOptions="Start" HeightRequest="200" WidthRequest="200" />
+			<Label Text="James Pollock" Grid.Row="1" x:Name="userName" BackgroundColor="#1aa1d6" FontSize="20" TextColor="White" WidthRequest="200" HorizontalTextAlignment="Center" HorizontalOptions="Start"/>
+		</Grid>
+	</ContentView.Content>
+</ContentView>

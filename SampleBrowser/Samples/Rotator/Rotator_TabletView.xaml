@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:SamplePage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:local="clr-namespace:SampleBrowser;assembly=SampleBrowser" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:rotate="clr-namespace:Syncfusion.SfRotator.XForms;assembly=Syncfusion.SfRotator.XForms" x:Class="SampleBrowser.Rotator_TabletView">
+  <local:SamplePage.Resources>
+    <ResourceDictionary>
+      <DataTemplate x:Key="itemTemplate">
+        <Image  Source="{Binding Image}"/>
+      </DataTemplate>
+    </ResourceDictionary>
+  </local:SamplePage.Resources>
+  <local:SamplePage.ContentView>
+    <Grid VerticalOptions="Center">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="8*" />
+        <RowDefinition Height="6*" />
+      </Grid.RowDefinitions>
+      <rotate:SfRotator x:Name="sfRotator" ItemTemplate="{StaticResource itemTemplate}" ItemsSource="{Binding ImageCollection}" NavigationDelay="2000" SelectedIndex="2" NavigationDirection="Horizontal" NavigationStripMode="Dots"  NavigationStripPosition="Bottom" />
+      <ScrollView Grid.Row="1">
+        <StackLayout>
+          <StackLayout Padding="0,10,0,0">
+            <Label x:Name="directionLabel" Text="Navigation Direction" FontSize="18" HeightRequest="20" YAlign="End" TextColor="Gray" />
+            <local:PickerExt x:Name="directionPicker" HeightRequest="40" SelectedIndex="1" />
+          </StackLayout>
+          <StackLayout Padding="0,10,0,0">
+            <Label Text="Navigation Strip Position" x:Name="tabLabel" FontSize="18" HeightRequest="20" YAlign="End" TextColor="Gray" />
+            <local:PickerExt x:Name="tabPicker" HeightRequest="40" SelectedIndex="1" />
+          </StackLayout>
+          <StackLayout Padding="0,10,0,0">
+            <Label Text="Navigation Strip Mode" x:Name="modeLabel" FontSize="18" HeightRequest="20" YAlign="End" TextColor="Gray" />
+            <local:PickerExt x:Name="modePicker" HeightRequest="40" SelectedIndex="1" />
+          </StackLayout>
+          <StackLayout Padding="0,10,0,20" Orientation="Horizontal">
+            <Label TextColor="#282828" x:Name="emptyLabel" Text="Enable AutoPlay" VerticalOptions="Center" HorizontalOptions="Start" FontFamily="Helvetica" FontSize="16" />
+            <Switch x:Name="toggleButton" IsToggled="False"  HorizontalOptions="EndAndExpand"  VerticalOptions="Center" />
+          </StackLayout>
+
+        </StackLayout>
+      </ScrollView>
+    </Grid>
+  </local:SamplePage.ContentView>
+</local:SamplePage>

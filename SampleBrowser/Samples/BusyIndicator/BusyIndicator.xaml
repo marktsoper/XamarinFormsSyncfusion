@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:SamplePage
+ xmlns="http://xamarin.com/schemas/2014/forms" xmlns:local="clr-namespace:SampleBrowser;assembly=SampleBrowser" xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.BusyIndicator">
+	<local:SamplePage.ContentView >
+	<Grid Padding="10, 10, 10, 10" BackgroundColor="White">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="2*"/>
+		</Grid.RowDefinitions>
+		<StackLayout Orientation="Vertical" Grid.Row="0">
+			<Label x:Name="animationLabel" Text="Animation Type" FontSize="20" FontAttributes="Bold"  HeightRequest= "50" />
+			<local:PickerExt x:Name="animationPicker" HeightRequest="40" VerticalOptions="Start"   /> 
+		</StackLayout>
+		<busyindicator:SfBusyIndicator Duration="20" VerticalOptions="FillAndExpand" Grid.Row="1" x:Name="sfbusyindicator" ViewBoxWidth="150" ViewBoxHeight="150" BackgroundColor="White"/>	
+	</Grid>
+	</local:SamplePage.ContentView>
+</local:SamplePage>	

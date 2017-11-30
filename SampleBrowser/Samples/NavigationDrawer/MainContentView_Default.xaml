@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.MainContentView_Default">
+	<ContentView.Content>
+	<StackLayout Orientation="Vertical" x:Name="mainContentView"  BackgroundColor="White">
+
+  	<StackLayout BackgroundColor="#1aa1d6" Orientation="Horizontal">
+		<Button  FontSize="20" x:Name="btn" HeightRequest="50" Clicked="Btn_Clicked" BackgroundColor="#1aa1d6" HorizontalOptions="Start" WidthRequest="50"/>
+  		<Label x:Name="headLabel" FontSize="16" BackgroundColor="#1aa1d6" Text="Home" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HeightRequest="50"  TextColor="White"/>
+  	</StackLayout>
+  		<StackLayout Orientation="Horizontal" Padding="10">
+  			<Label VerticalOptions="Start" FontSize="14" x:Name="labl" TextColor="Black" HeightRequest="300"  HorizontalTextAlignment="Start"  HorizontalOptions="StartAndExpand" />
+  		</StackLayout>
+  	</StackLayout>
+	</ContentView.Content>
+</ContentView>

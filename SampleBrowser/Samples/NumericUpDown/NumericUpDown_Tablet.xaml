@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SamplePage
+ xmlns="http://xamarin.com/schemas/2014/forms" xmlns:local="clr-namespace:SampleBrowser;assembly=SampleBrowser" xmlns:numeric="clr-namespace:Syncfusion.SfNumericUpDown.XForms;assembly=Syncfusion.SfNumericUpDown.XForms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.NumericUpDown_Tablet">
+  <local:SamplePage.ContentView >
+    <Grid x:Name="sampleLayout" >
+      <Grid.RowDefinitions>  
+        <RowDefinition Height="8*"/>
+        <RowDefinition Height="6*"/>
+      </Grid.RowDefinitions>
+    <ScrollView Padding="80, 60, 0,0" >
+      <Grid>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="auto"/>
+          <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+      <StackLayout Orientation="Vertical" Grid.Row="0" x:Name="adultsLayout">
+        <Label x:Name="adultLabel" Text = "Number of Adults"  FontSize="20"  HorizontalOptions = "Start"/>
+        <numeric:SfNumericUpDown MaximumDecimalDigits="2"  SpinButtonAlignment="Right"  TextColor="Black"  x:Name="adultNumericUpDown"  AllowNull="true" HorizontalOptions="StartAndExpand" VerticalOptions="Center" FormatString="n" Watermark="Enter the Number of adult"   Value="5" />
+      </StackLayout>
+      <StackLayout Orientation="Vertical" Grid.Row="1" Padding="0,80,0,0" x:Name="infantsLayout" >
+        <Label x:Name="infantsLabel"   Text = "Number of infants"  FontSize="20"  HorizontalOptions = "Start"/>
+        <numeric:SfNumericUpDown MaximumDecimalDigits="2"  SpinButtonAlignment="Right"  TextColor="Black" x:Name="infantsNumericUpDown"  AllowNull="true" HorizontalOptions="StartAndExpand" VerticalOptions="Center" FormatString="n" Watermark="Enter the Number of infants"  Value="2" />
+      </StackLayout>
+      </Grid>
+
+    </ScrollView>
+      <ScrollView Grid.Row="1">
+
+        <StackLayout x:Name="Property_Windows">
+          <StackLayout Orientation="Horizontal" Padding="10,0,0,0" x:Name="temp"  HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand">
+            <Label Text="OPTIONS" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="150" FontSize="18"  FontFamily="Helvetica"/>
+            <Button x:Name="Property_Button" HorizontalOptions="EndAndExpand" ></Button>
+          </StackLayout>
+        </StackLayout>
+
+      </ScrollView>
+    </Grid>
+  </local:SamplePage.ContentView>
+
+
+
+</local:SamplePage>

@@ -1,0 +1,443 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{4A21CEA0-263A-493F-B249-3CE3EF291788}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SampleBrowser.UWP</RootNamespace>
+    <AssemblyName>SampleBrowser.UWP</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.10240.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile>SampleBrowser.UWP_TemporaryKey.pfx</PackageCertificateKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>false</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>false</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <EmbeddedResource Include="Assets\ShapeFiles\usa_state.dbf" />
+    <EmbeddedResource Include="Assets\ShapeFiles\usa_state.shp" />
+    <EmbeddedResource Include="Assets\ShapeFiles\world1.dbf" />
+    <EmbeddedResource Include="Assets\ShapeFiles\world1.shp" />
+    <None Include="project.json" />
+    <EmbeddedResource Include="Assets\Hospital.png" />
+    <EmbeddedResource Include="Assets\family.png" />
+    <EmbeddedResource Include="Assets\ShapeFiles\Custom.dbf" />
+    <EmbeddedResource Include="Assets\ShapeFiles\Custom.shp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomListViewRenderer.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SaveWindows.cs" />
+    <Compile Include="ViewExtRenderer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="SampleBrowser.UWP_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Apply.png" />
+    <Content Include="Assets\Controls.png" />
+    <Content Include="Assets\KanbanIcons\bucolicpie.png" />
+    <Content Include="Assets\KanbanIcons\bumpercrop.png" />
+    <Content Include="Assets\KanbanIcons\doublecheesemargherita.png" />
+    <Content Include="Assets\KanbanIcons\Image10.png" />
+    <Content Include="Assets\KanbanIcons\Image11.png" />
+    <Content Include="Assets\KanbanIcons\Image12.png" />
+    <Content Include="Assets\KanbanIcons\Image13.png" />
+    <Content Include="Assets\KanbanIcons\Image14.png" />
+    <Content Include="Assets\KanbanIcons\Image15.png" />
+    <Content Include="Assets\KanbanIcons\Image16.png" />
+    <Content Include="Assets\KanbanIcons\Image17.png" />
+    <Content Include="Assets\KanbanIcons\Image18.png" />
+    <Content Include="Assets\KanbanIcons\Image19.png" />
+    <Content Include="Assets\KanbanIcons\Image20.png" />
+    <Content Include="Assets\KanbanIcons\Image21.png" />
+    <Content Include="Assets\KanbanIcons\Image22.png" />
+    <Content Include="Assets\KanbanIcons\Image23.png" />
+    <Content Include="Assets\KanbanIcons\Image24.png" />
+    <Content Include="Assets\KanbanIcons\Image25.png" />
+    <Content Include="Assets\KanbanIcons\Image26.png" />
+    <Content Include="Assets\KanbanIcons\Image27.png" />
+    <Content Include="Assets\KanbanIcons\Image28.png" />
+    <Content Include="Assets\KanbanIcons\Image29.png" />
+    <Content Include="Assets\KanbanIcons\Image30.png" />
+    <Content Include="Assets\KanbanIcons\Image8.png" />
+    <Content Include="Assets\KanbanIcons\Image9.png" />
+    <Content Include="Assets\KanbanIcons\margherita.png" />
+    <Content Include="Assets\KanbanIcons\saladdaze.png" />
+    <Content Include="Assets\KanbanIcons\spiceoflife.png" />
+    <Content Include="Assets\KanbanIcons\user.png" />
+    <Content Include="Assets\KanbanIcons\verynicoise.png" />
+    <Content Include="Assets\Setting.png" />
+    <Content Include="burgericon.png" />
+    <Content Include="editor.png" />
+    <Content Include="Down.png" />
+    <EmbeddedResource Include="eficon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Content Include="Icons\datasource.png" />
+    <Content Include="Icons\image1.png" />
+    <Content Include="Icons\image2.png" />
+    <Content Include="Icons\image3.png" />
+    <Content Include="Icons\image4.png" />
+    <Content Include="Icons\image5.png" />
+    <Content Include="Icons\image6.png" />
+    <Content Include="Icons\image7.png" />
+    <Content Include="Icons\kanban.png" />
+    <Content Include="Icons\listview.png" />
+    <Content Include="Icons\movie1.png" />
+    <Content Include="Icons\movie2.png" />
+    <Content Include="Icons\movie3.png" />
+    <Content Include="Icons\movie4.png" />
+    <Content Include="Icons\movie5.png" />
+    <Content Include="Icons\navigationdrawer1.png" />
+    <Content Include="Icons\pdfviewer.png" />
+    <Content Include="Icons\Pulltorefresh.png" />
+    <Content Include="PageDown.png" />
+    <Content Include="PageUp.png" />
+    <Content Include="scheduleview.png" />
+    <Content Include="Icons\sparkline_chart.png" />
+    <Content Include="setting.png" />
+    <Content Include="Icons\autocomplete.png" />
+    <Content Include="Icons\back.png" />
+    <Content Include="Icons\barcode.png" />
+    <Content Include="Icons\BulletGraph.png" />
+    <Content Include="Icons\busy.png" />
+    <Content Include="Icons\calendar.png" />
+    <Content Include="Icons\calculate.png" />
+    <Content Include="Icons\carousel.png" />
+    <Content Include="Icons\rotator.png" />
+    <Content Include="Icons\numericupdown.png" />
+    <Content Include="Icons\chart.png" />
+    <Content Include="Icons\circulargauge.png" />
+    <Content Include="Icons\datagrid.png" />
+    <Content Include="Icons\digitalgauge.png" />
+    <Content Include="Icons\presentation.png" />
+    <Content Include="Icons\docIo.png" />
+    <Content Include="Icons\lineargauge.png" />
+    <Content Include="Icons\logo.PNG" />
+    <Content Include="Icons\maps.png" />
+    <Content Include="Icons\new.png" />
+    <Content Include="Icons\numerictextbox.png" />
+    <Content Include="Icons\optionBack.png" />
+    <Content Include="Icons\options.png" />
+    <Content Include="Icons\pdf.png" />
+    <Content Include="Icons\preview.png" />
+    <Content Include="Icons\rangeslider.png" />
+    <Content Include="Icons\rangenavigator.png" />
+    <Content Include="Icons\rating.png" />
+    <Content Include="Icons\schedule1.png" />
+    <Content Include="Icons\treemap.png" />
+    <Content Include="Icons\updated.png" />
+    <Content Include="Icons\xlsio.png" />
+    <Content Include="grain.png" />
+    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+    <Content Include="mount.jpg" />
+    <Content Include="movie.png" />
+    <Content Include="Up.png" />
+    <Content Include="user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Syncfusion.Data.Portable">
+      <HintPath>..\..\..\..\lib\pcl\Syncfusion.Data.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.GridCommon.Portable">
+      <HintPath>..\..\..\..\lib\pcl\Syncfusion.GridCommon.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Calculate.Portable">
+      <HintPath>..\..\..\..\lib\pcl\Syncfusion.Calculate.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfAutoComplete.XForms">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfAutoComplete.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfListView.XForms">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfListView.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfListView.XForms.UWP">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfListView.XForms.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfAutoComplete.XForms.UWP">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfAutoComplete.XForms.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfBusyIndicator.UWP">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfBusyIndicator.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfBusyIndicator.XForms">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfBusyIndicator.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfBusyIndicator.XForms.UWP">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfBusyIndicator.XForms.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfCalendar.XForms">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfCalendar.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfCalendar.XForms.UWP">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfCalendar.XForms.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfChart.UWP">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfChart.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfChart.XForms">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfChart.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfChart.XForms.UWP">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfChart.XForms.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfCarousel.UWP">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfCarousel.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfCarousel.XForms">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfCarousel.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfCarousel.XForms.UWP">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfCarousel.XForms.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfKanban.UWP">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfKanban.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfKanban.XForms">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfKanban.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfKanban.XForms.UWP">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfKanban.XForms.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfNavigationDrawer.UWP">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfNavigationDrawer.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfNavigationDrawer.XForms">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfNavigationDrawer.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfNavigationDrawer.XForms.UWP">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfNavigationDrawer.XForms.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfBarcode.UWP">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfBarcode.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfBarcode.XForms">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfBarcode.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfBarcode.XForms.UWP">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfBarcode.XForms.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfInput.UWP">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfInput.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfShared.UWP">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfShared.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfGauge.UWP">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfGauge.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfGauge.XForms">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfGauge.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfGauge.XForms.UWP">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfGauge.XForms.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfPullToRefresh.UWP">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfPullToRefresh.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfPullToRefresh.XForms">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfPullToRefresh.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfPullToRefresh.XForms.UWP">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfPullToRefresh.XForms.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfSchedule.UWP">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfSchedule.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfSchedule.XForms">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfSchedule.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfSchedule.XForms.UWP">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfSchedule.XForms.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfDataGrid.XForms">
+      <HintPath>..\..\..\..\lib\pcl\Syncfusion.SfDataGrid.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfDataGrid.XForms.UWP">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfDataGrid.XForms.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfNumericTextBox.XForms">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfNumericTextBox.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfNumericTextBox.XForms.UWP">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfNumericTextBox.XForms.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfNumericUpDown.XForms">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfNumericUpDown.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfNumericUpDown.XForms.UWP">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfNumericUpDown.XForms.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfRangeSlider.XForms">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfRangeSlider.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfRangeSlider.XForms.UWP">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfRangeSlider.XForms.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfRating.XForms">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfRating.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfRating.XForms.UWP">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfRating.XForms.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfRotator.UWP">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfRotator.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfRotator.XForms">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfRotator.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfRotator.XForms.UWP">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfRotator.XForms.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfPdfViewer.XForms">
+      <HintPath>..\..\..\..\lib\pcl\Syncfusion.SfPdfViewer.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfPdfViewer.XForms.UWP">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfPdfViewer.XForms.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfMaps.UWP">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfMaps.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfMaps.XForms">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfMaps.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfMaps.XForms.UWP">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfMaps.XForms.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfSparkline.XForms">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfSparkline.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfSparkline.XForms.UWP">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfSparkline.XForms.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfTreeMap.UWP">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfTreeMap.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfTreeMap.XForms">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfTreeMap.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfTreeMap.XForms.UWP">
+      <HintPath>..\..\..\..\lib\uwp\Syncfusion.SfTreeMap.XForms.UWP.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SampleBrowser\SampleBrowser.csproj">
+      <Project>{3375714e-192c-4d0b-aa67-c974d99f1a11}</Project>
+      <Name>SampleBrowser</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

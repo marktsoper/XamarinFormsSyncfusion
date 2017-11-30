@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:SamplePage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:local="clr-namespace:SampleBrowser;assembly=SampleBrowser" xmlns:Calendar="clr-namespace:Syncfusion.SfCalendar.XForms;assembly=Syncfusion.SfCalendar.XForms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.InlineEvents">
+	<local:SamplePage.ContentView>
+	<StackLayout x:Name="sampleLayout">
+	<Calendar:SfCalendar x:Name="calendar" DataSource="{Binding}" VerticalOptions="FillAndExpand" ViewMode="MonthView" ShowInlineEvents="true"/>
+	</StackLayout>
+	</local:SamplePage.ContentView>
+</local:SamplePage>

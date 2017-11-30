@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Samples>
+
+  <Group Title="Chart"
+         ImageId="chart.png"
+         Description="Essential Chart for Android is a visually stunning charting component that is also easy to use. It includes all the common chart types ranging from line charts to financial charts.">
+
+    <Sample Title="Line" Type="SampleBrowser.Line" ImageID="chart_line.png"/>
+    <Sample Title="Step Line" Type="SampleBrowser.StepLine" ImageID="chart_Step line.png"/>
+    <Sample Title="Spline" Type="SampleBrowser.Spline" ImageID="chart_Spline.png"/>
+    <Sample Title="Column" Type="SampleBrowser.Column" ImageID="chart_Column.png"/>
+    <Sample Title="Bar" Type="SampleBrowser.Bar" ImageID="chart_Bar.png"/>
+    <Sample Title="Area" Type="SampleBrowser.Area" ImageID="chart_Area.png"/>
+    <Sample Title="Step Area" Type="SampleBrowser.StepArea" ImageID="chart_Area.png"/>
+    <Sample Title="Spline Area" Type="SampleBrowser.SplineArea" ImageID="chart_Spline.png"/>
+    <Sample Title="Pie" Type="SampleBrowser.Pie" ImageID="chart_Pie.png"/>
+    <Sample Title="Semi Pie" Type="SampleBrowser.SemiPie" ImageID="chart_Pie.png"/>
+    <Sample Title="Doughnut" Type="SampleBrowser.Doughnut" ImageID="chart_Doughnut.png"/>
+    <Sample Title="Semi Doughnut" Type="SampleBrowser.SemiDoughnut" ImageID="chart_Doughnut.png"/>
+    <Sample Title="Pyramid" Type="SampleBrowser.Pyramid" ImageID="chart_Pie.png"/>
+    <Sample Title="Funnel" Type="SampleBrowser.Funnel" ImageID="chart_Doughnut.png"/>
+    <Sample Title="Bubble" Type="SampleBrowser.Bubble" ImageID="chart_Bubble.png"/>
+    <Sample Title="Scatter" Type="SampleBrowser.Scatter" ImageID="chart_Spline.png"/>
+    <Sample Title="Range Column" Type="SampleBrowser.RangeColumn" ImageID="chart_Column.png"/>
+    <Sample Title="Range Area" Type="SampleBrowser.RangeArea" ImageID="chart_Area.png"/>
+    <Sample Title="Candle" Type="SampleBrowser.Candle" ImageID="chart_Candle.png"/>
+    <Sample Title="OHLC" Type="SampleBrowser.OHLC" ImageID="chart_OHLC.png"/>
+    <Sample Title="Polar" Type="SampleBrowser.Polar" ImageID="chart_Polar.png"/>
+    <Sample Title="Radar" Type="SampleBrowser.Radar" ImageID="chart_Radar.png"/>
+    <Sample Title="Stacked Column" Type="SampleBrowser.StackedColumn" ImageID="chart_StackingColumn.png"/>
+    <Sample Title="100% Stacked Column" Type="SampleBrowser.StackedColumn100" ImageID="chart_100StackedColumn.png"/>
+    <Sample Title="Stacked Bar" Type="SampleBrowser.StackedBar" ImageID="chart_StackingBar.png"/>
+    <Sample Title="100% Stacked Bar" Type="SampleBrowser.StackedBar100" ImageID="chart_100StackedBar.png"/>
+    <Sample Title="Stacked Area" Type="SampleBrowser.StackedArea" ImageID="chart_StackingArea.png"/>
+    <Sample Title="100% Stacked Area" Type="SampleBrowser.StackedArea100" ImageID="chart_100StackedArea.png"/>
+    <Sample Title="Live Update" Type="SampleBrowser.LiveUpdate" ImageID="chart_LiveUpdate.png"/>
+    <Sample Title="Vertical Chart" Type="SampleBrowser.VerticalChart" ImageID="chart_VerticalChart.png"/>
+    <Sample Title="Multiple Charts" Type="SampleBrowser.MultipleSeries" ImageID="chart_MultipleChart.png"/>
+    <Sample Title="Strip Lines" Type="SampleBrowser.StripLines" ImageID="chart_Spline.png"/>
+    <Sample Title="Trackball" Type="SampleBrowser.Trackball" ImageID="chart_Selection.png"/>
+    <Sample Title="Tooltip" Type="SampleBrowser.TooltipCustomization" ImageID="chart_Tooltip.png" />
+    <Sample Title="Data Marker" Type="SampleBrowser.DataMarkerCustomization" ImageID="chart_Tooltip.png"/>
+    <Sample Title="Data Point Selection" Type="SampleBrowser.DataPointSelection" ImageID="chart_Selection.png"/>
+    <Sample Title="Zooming and Panning" Type="SampleBrowser.ZoomingAndPanning" ImageID="chart_Zooming.png"/>
+    <Sample Title="Category Axis" Type="SampleBrowser.Category" ImageID="chart_CategoryAxis.png"/>
+    <Sample Title="Numerical Axis" Type="SampleBrowser.Numeric" ImageID="chart_NumericalAxis.png"/>
+    <Sample Title="DateTime Axis" Type="SampleBrowser.Date" ImageID="chart_Dateandtime.png"/>
+    <Sample Title="Logarithmic Axis" Type="SampleBrowser.Logarithmic" ImageID="chart_CategoryAxis.png" />
+    <Sample Title="Multiple Axes" Type="SampleBrowser.MultipleAxis" ImageID="chart_MultipleAxes.png"/>
+    <Sample Title="Technical Indicators" Type="SampleBrowser.TechnicalIndicators" ImageID="chart_Dateandtime.png"/>
+    <Sample Title="Auto Scrolling" Type="SampleBrowser.AutoScrolling" ImageID="chart_Autoscroll.png"/>
+  </Group>
+
+   <Group Title="Kanban" ImageId="kanban.png">
+    <Sample Title="Getting Started" Type="SampleBrowser.KanbanGettingStarted" />
+    <Sample Title="Customization" Type="SampleBrowser.KanbanCustomization" />
+  </Group>
+	
+  <Group Title="DataGrid" ImageId="datagrid.png" IsUpdated="True" Description= "DataGrid for Xamarin Forms">
+    <Sample Title="Getting Started" Type="SampleBrowser.GridGettingStarted" ImageId="datagrid.png"/>
+    <Sample Title="Sorting" Type="SampleBrowser.Sorting" ImageId="datagrid.png"/>
+    <Sample Title="Custom Sorting" Type="SampleBrowser.CustomSorting" ImageId="datagrid.png"/>
+    <Sample Title="Filtering" Type="SampleBrowser.Filtering" ImageId="datagrid.png" />
+    <Sample Title="Frozen Row" Type="SampleBrowser.FrozenRow" ImageId="datagrid.png" />
+    <Sample Title="Cell Template" Type="SampleBrowser.CellTemplate" ImageId="datagrid.png"/>
+    <Sample Title="Grouping" Type="SampleBrowser.Grouping" ImageId="datagrid.png"/>
+    <Sample Title="Custom Grouping" Type="SampleBrowser.CustomGrouping" ImageId="datagrid.png"/>
+    <Sample Title="Selection" Type="SampleBrowser.Selection" ImageId="datagrid.png"/>
+    <Sample Title="Grid Columns" Type="SampleBrowser.GridColumns" ImageId="datagrid.png"/>
+    <Sample Title="Drag And Drop" Type="SampleBrowser.RowDragAndDrop" ImageId="datagrid.png"/>
+    <Sample Title="Unbound Column" Type="SampleBrowser.UnBoundColumn" ImageId="datagrid.png"/>
+    <Sample Title="Conditional Styling" Type="SampleBrowser.ConditionalFormatting" ImageId="datagrid.png"/>
+    <Sample Title="Styles" Type="SampleBrowser.Styles" ImageId="datagrid.png"/>
+    <Sample Title="Auto Row Height" Type="SampleBrowser.AutoRowHeight" ImageId="datagrid.png" IsNew ="true"/>
+    <Sample Title="Horizontal Scrolling" Type="SampleBrowser.HorizontalScrolling" ImageId="datagrid.png"/>
+    <Sample Title="Load More" Type="SampleBrowser.LoadMore" ImageId="datagrid.png"/>
+    <Sample Title="Pull To Refresh" Type="SampleBrowser.PullToRefresh" ImageId ="datagrid.png"/>
+    <Sample Title="Paging" Type="SampleBrowser.Paging" ImageId ="datagrid.png"/>
+    <Sample Title="Swiping" Type="SampleBrowser.Swiping" ImageId ="datagrid.png"/>
+    <Sample Title="Rendering Dynamic Data" Type="SampleBrowser.RenderingDynamicData" ImageId="datagrid.png"/>
+    <Sample Title="Exporting" Type="SampleBrowser.Exporting" ImageId="datagrid.png"/>
+  </Group>
+  
+  <Group Title="ListView" ImageId="listview.png" IsPreview="true" Description= "ListView for Xamarin.Forms">
+    <Sample Title="Getting Started" Type="SampleBrowser.ListViewGettingStarted" ImageId="listview.png"/>
+    <Sample Title="Grouping" Type="SampleBrowser.ListViewGrouping" ImageId="listview.png"/>
+    <Sample Title="Horizontal Orientation" Type="SampleBrowser.ListViewOrientation" ImageId="listview.png"/>
+    <Sample Title="Selection" Type="SampleBrowser.ListViewSelection" ImageId="listview.png"/>
+    <Sample Title="Sorting and Filtering" Type="SampleBrowser.ListViewSortingFiltering" ImageId="listview.png"/>
+    <Sample Title="Swiping" Type="SampleBrowser.ListViewSwiping" ImageId="listview.png"/>
+  </Group>
+
+  <Group Title="DataSource" ImageId="datasource.png" Description= "DataSource for Xamarin.Forms">
+    <Sample Title="Getting Started" Type="SampleBrowser.DataSourceGettingStarted" ImageId="datasource.png"/>
+    <Sample Title="Sorting" Type="SampleBrowser.DataSourceSorting" ImageId="datasource.png"/>
+    <Sample Title="Grouping" Type="SampleBrowser.DataSourceGrouping" ImageId="datasource.png"/>
+  </Group>
+  
+  <Group Title="CircularGauge" ImageId="circulargauge.png">
+    <Sample Title="CircularGauge" Type="SampleBrowser.CircularGauge" ImageId="circulargauge.png"/>
+  </Group>
+
+  <Group Title="Sparkline" ImageId="sparkline_chart.png">
+    <Sample Title="Sparkline" Type="SampleBrowser.Sparkline" ImageId="sparkline_chart.png"></Sample>
+  </Group>
+  
+  <Group Title="Schedule" ImageId="schedule1.png" Description= "Schedule Xamarin Forms">
+    <Sample Title="Schedule Views" Type="SampleBrowser.Schedule_View" />
+    <Sample Title="Recurrence" Type="SampleBrowser.Recurrence" />
+    <Sample Title="Localization" Type="SampleBrowser.Localization" />
+    <Sample Title="Configurations" Type="SampleBrowser.Configurations"/>
+	 <Sample Title="Customization" Type="SampleBrowser.Customization" />
+  </Group>
+  
+  <Group Title="DigitalGauge" ImageId="digitalgauge.png">
+  	<Sample Title="DigitalGauge" Type="SampleBrowser.DigitalGauge" ImageId="digital.png"/>
+  </Group>
+  
+  <Group Title="LinearGauge" ImageId="lineargauge.png">
+  	<Sample Title="LinearGauge" Type="SampleBrowser.LinearGauge" ImageId="linear.png"/>
+  </Group>
+  <Group Title="Maps"  ImageId="maps.png">
+    <Sample Title="Getting Started" Type="SampleBrowser.MapsGettingStarted"/>
+    <Sample Title="Bubble Visualization" Type="SampleBrowser.BubbleVisualization"/>
+    <Sample Title="ColorMapping" Type="SampleBrowser.ColorMappings"/>
+    <Sample Title="TicketBooking" Type="SampleBrowser.MapsTicketBooking" />
+  </Group>
+  <Group Title="TreeMap"  ImageId="treemap.png">
+	<Sample Title="Getting Started" Type="SampleBrowser.GettingStarted"/>
+	<Sample Title="Hierarchical" Type="SampleBrowser.Hierarchical"/>
+	<Sample Title="Customization"  Type="SampleBrowser.TreeMapCustomization"/>
+  </Group>
+  
+  <Group Title="Barcode" ImageId="barcode.png"  Description= "Barcodes for Xamarin Forms" >
+	<Sample Title="Barcode" Type="SampleBrowser.Barcodes"/>
+  </Group>
+  
+  <Group Title="Calendar" ImageId="calendar.png">
+	<Sample Title="Getting Started" Type="SampleBrowser.CalendarGettingStarted"/>
+	<Sample Title="Inline Events" Type="SampleBrowser.InlineEvents"/>
+	<Sample Title="BlackoutDates" Type="SampleBrowser.BlackoutDates"/>
+	<Sample Title="Localization" Type="SampleBrowser.CalendarLocalization"/>
+	<Sample Title="Configuration" Type="SampleBrowser.Configuration"/>
+  </Group>
+    
+  <Group Title="RangeNavigator" ImageId="rangenavigator.png">
+    <Sample Title="Getting Started" Type="SampleBrowser.RangeNavigatorGettingStarted" />
+  </Group>
+  <Group Title="PDFViewer" ImageId="pdfviewer.png" IsPreview="true">
+    <Sample Title="Getting Started" Type="SampleBrowser.PDFViewerGettingStarted" />
+  </Group>
+	
+  <Group Title="Rating" ImageId="rating.png">
+  	<Sample Title="Rating" Type="SampleBrowser.Rating" ImageId="rating.png"/>
+  </Group>
+
+  <Group Title="AutoComplete" ImageId="autocomplete.png">
+  	<Sample Title="AutoComplete" Type="SampleBrowser.AutoComplete" ImageId="autocomplete.png"/>
+  </Group>
+
+  <Group Title="BusyIndicator" ImageId="busy.png">
+  	<Sample Title="BusyIndicator" Type="SampleBrowser.BusyIndicator" ImageId="busy.png" IsUpdated="true"/>
+  </Group>
+
+  
+  <Group Title="NumericTextBox" ImageId="numerictextbox.png">
+  	<Sample Title="NumericTextBox" Type="SampleBrowser.NumericTextBox" ImageId="numerictextbox.png"/>
+  </Group>
+  <Group Title="RangeSlider" ImageId="rangeslider.png">
+  	<Sample Title="RangeSlider" Type="SampleBrowser.RangeSlider" ImageId="rangeslider.png"/>
+  	<Sample Title="Equaliser" Type="SampleBrowser.Orientation"/>
+  	<Sample Title="Slider" Type="SampleBrowser.Slider"/>
+  </Group>
+
+  
+
+  <Group Title="Rotator" ImageId="rotator.png" >
+  	<Sample Title="Rotator" Type="SampleBrowser.Rotator" ImageId="rotator.png" />
+  </Group>
+
+  <Group Title="Carousel" ImageId="carousel.png" >
+  	<Sample Title="Carousel" Type="SampleBrowser.Carousel" ImageId="carousel.png" />
+  </Group>
+  <Group Title="PullToRefresh" ImageId="pulltorefresh.png" >
+  	<Sample Title="PullToRefresh" Type="SampleBrowser.PullToRefreshView" ImageId="pulltorefresh.png"/>
+  </Group>
+  <Group Title="NumericUpDown" ImageId="numericupdown.png">
+    <Sample Title="NumericUpDown" Type="SampleBrowser.NumericUpDown" ImageId="numericupdown.png"/>
+  </Group>
+
+  <Group Title="NavigationDrawer" ImageId="navigationdrawer1.png" >
+    <Sample Title="NavigationDrawer" Type="SampleBrowser.NavigationDrawer" ImageId="navigationdrawer.png"/>
+  </Group>
+
+  <Group Title="Presentation"
+           ImageId="presentation.png"
+           Description="">
+
+    <Sample Title="Getting Started" Type="SampleBrowser.GettingStartedPresentation" />
+	<Sample Title="Images" Type="SampleBrowser.ImagesPresentation"/>
+	<Sample Title="Slides" Type="SampleBrowser.SlidesPresentation"/>
+	<Sample Title="Tables" Type="SampleBrowser.TablesPresentation"/>
+	<Sample Title="Charts" Type="SampleBrowser.ChartsPresentation"/>
+  </Group>
+
+  <Group Title="XlsIO"
+           ImageId="xlsio.png"
+		   IsUpdated="True"
+           Description="">
+
+    <Sample Title="Create Spreadsheet" Type="SampleBrowser.CreateSpreadsheetPage"/>
+    <Sample Title="Charts" Type="SampleBrowser.ChartsPage"/>
+    <Sample Title="Formulas" Type="SampleBrowser.FormulasPage"/>
+    <Sample Title="Import Business Objects" Type="SampleBrowser.ImportBusinessObjectsPage"/>
+    <Sample Title="Import XML" Type="SampleBrowser.ImportXMLPage"/>
+    <Sample Title="Filters" Type="SampleBrowser.FiltersPage" IsUpdated="true"/>
+    <Sample Title="Find and replace" Type="SampleBrowser.FindAndReplacePage" />
+  </Group>
+
+ <Group Title="DocIO"
+           ImageId="docio.png"
+		   IsUpdated="False"
+           Description="" >
+    <Sample Title="Getting Started" Type="SampleBrowser.GettingStartedDocIO"/>
+    <Sample Title="Built-in Style" Type="SampleBrowser.BuiltInStyle"/>
+    <Sample Title="Custom Style" Type="SampleBrowser.CustomStyle"/>
+    <Sample Title="Bookmark Navigation" Type="SampleBrowser.BookmarkNavigation"/>
+	<Sample Title= "Pie Chart" Type = "SampleBrowser.PieChart" IsNew="false"/>
+	<Sample Title ="Bar Chart" Type="SampleBrowser.BarChart" IsNew="false"/> 
+    <Sample Title="Letter Formatting" Type="SampleBrowser.LetterFormatting"/>
+   <Sample Title="Word to HTML" Type="SampleBrowser.WordToHTML" />
+  </Group>
+
+  <Group Title="PDF"
+     ImageId="pdf.png">
+    <Sample Title="Getting Started" Type="SampleBrowser.GettingStartedPDF"/>
+    <Sample Title="Barcode" Type="SampleBrowser.Barcode" />
+    <Sample Title="Booklet" Type="SampleBrowser.Booklet"/>
+    <Sample Title="Stamping" Type="SampleBrowser.Stamping" />
+    <Sample Title="Table Features" Type="SampleBrowser.TableFeatures"/>
+  </Group>
+
+   <Group Title="Calculate" ImageId="calculate.png" Description= "Calculate Xamarin Forms">
+    <Sample Title="Functions Library" Type="SampleBrowser.FunctionsLibrary" />
+    <Sample Title="CalcQuick Calculation" Type="SampleBrowser.CalcQuick" />
+  </Group>
+  </Samples>

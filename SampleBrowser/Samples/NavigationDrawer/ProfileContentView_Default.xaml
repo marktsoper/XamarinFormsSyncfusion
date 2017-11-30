@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.ProfileContentView_Default">
+	<ContentView.Content>
+	<StackLayout Orientation="Vertical" BackgroundColor="White">
+
+  	<StackLayout BackgroundColor="#1aa1d6" Orientation="Horizontal">
+		<Button  FontSize="20" x:Name="btn" HeightRequest="50" Clicked="Btn_Clicked" BackgroundColor="#1aa1d6" HorizontalOptions="Start" WidthRequest="50"/>
+  		<Label x:Name="headLabel" FontSize="16" BackgroundColor="#1aa1d6" Text="Profile" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HeightRequest="50"  TextColor="White"/>
+  	</StackLayout>
+  		<StackLayout  Orientation="Vertical" VerticalOptions="Center" Padding="10" >
+  			<StackLayout  Orientation="Horizontal" VerticalOptions="Center" Spacing="4" >
+
+  				<Image Source="user.png" HeightRequest="80" WidthRequest="80" Aspect="AspectFill"/>
+  				<StackLayout Orientation="Vertical" Spacing="2">
+  					<Label Text="James Pollock" FontSize="15" HeightRequest="25" WidthRequest="200" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+  					<Label Text="25 years" FontSize="12" HeightRequest="25" WidthRequest="100" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+  				</StackLayout>
+
+  			</StackLayout>
+
+  			<Label VerticalOptions="StartAndExpand" x:Name="profText" FontSize="14" TextColor="Black" HorizontalTextAlignment="Start" HeightRequest="300" WidthRequest="500" HorizontalOptions="StartAndExpand"> 
+  			</Label> 
+  		</StackLayout>
+  	</StackLayout>
+	</ContentView.Content>
+</ContentView>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<local:SamplePage xmlns:schedule="clr-namespace:Syncfusion.SfSchedule.XForms;assembly=Syncfusion.SfSchedule.XForms" 
+		xmlns:local="clr-namespace:SampleBrowser;assembly=SampleBrowser"
+		xmlns="http://xamarin.com/schemas/2014/forms"
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="SampleBrowser.Schedule_View">
+	
+	<local:SamplePage.ContentView>
+		<Grid x:Name="grid_layout">
+		<Grid.RowDefinitions>
+				<RowDefinition Height="0.1*" />
+				<RowDefinition Height="0.9*" />
+			</Grid.RowDefinitions>
+			<Grid Grid.Row="0" x:Name="header_layout" BackgroundColor="#D3D3D3" >
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="0.2*" />
+					<ColumnDefinition Width="0.6*" />
+					<ColumnDefinition Width="0.2*" />
+				</Grid.ColumnDefinitions>
+				<Button x:Name="scheduleView_Button" Grid.Column="0"  BackgroundColor="#D3D3D3" HorizontalOptions= "Start" VerticalOptions="Center"  />
+				<Label x:Name="Month_Button" Grid.Column="1" VerticalOptions="Center" FontSize="20" TextColor="Black" BackgroundColor="#D3D3D3" ></Label>
+				<Button x:Name="Editor_Button"  Grid.Column="2" BackgroundColor="#D3D3D3" VerticalOptions="Center"  HorizontalOptions="End" />	
+			</Grid>
+
+			<schedule:SfSchedule Grid.Row="1" x:Name="Schedule" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" DataSource="{Binding Appointments}">
+				<schedule:SfSchedule.BindingContext>
+					<local:ScheduleViewModel />
+				</schedule:SfSchedule.BindingContext>
+			</schedule:SfSchedule>
+			<ListView x:Name="scheduleview_list" HasUnevenRows="False" 
+					HeightRequest="200" RowHeight="50" WidthRequest="200" 
+					VerticalOptions="Start" HorizontalOptions="Start" 
+					SeparatorVisibility="Default" SeparatorColor="Gray" Grid.Row="1"
+				BackgroundColor="White">
+			</ListView>
+			<local:EditorLayout x:Name="editor" Grid.RowSpan="2"  />
+		</Grid>
+	</local:SamplePage.ContentView>
+	<local:SamplePage.Padding>
+		<OnPlatform x:TypeArguments="Thickness">
+			<OnPlatform.iOS>
+        0, 0, 0, 90
+      </OnPlatform.iOS>
+			<OnPlatform.Android>
+        -10, -10, -10, -20
+      </OnPlatform.Android>
+			<OnPlatform.WinPhone>
+        -10, -10, -10, -20
+      </OnPlatform.WinPhone>
+		</OnPlatform>
+	</local:SamplePage.Padding>
+</local:SamplePage>

@@ -1,0 +1,6 @@
+﻿<local:SamplePage
+ xmlns="http://xamarin.com/schemas/2014/forms" xmlns:local="clr-namespace:SampleBrowser;assembly=SampleBrowser" xmlns:autocomplete="clr-namespace:Syncfusion.SfAutoComplete.XForms;assembly=Syncfusion.SfAutoComplete.XForms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.Rotator">
+	<local:SamplePage.ContentView >
+
+	</local:SamplePage.ContentView>
+	</local:SamplePage>

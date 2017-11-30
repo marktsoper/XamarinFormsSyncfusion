@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SamplePage
+             xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+              xmlns:local="clr-namespace:SampleBrowser;assembly=SampleBrowser"
+              xmlns="http://xamarin.com/schemas/2014/forms"
+              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              x:Class="SampleBrowser.StackedColumn100">
+
+  <local:SamplePage.BindingContext>
+    <local:ViewModel/>
+  </local:SamplePage.BindingContext>
+
+  <local:SamplePage.ContentView>
+
+    <chart:SfChart HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+      <chart:SfChart.Title>
+        <chart:ChartTitle Text="Gross Domestic Product Growth"/>
+      </chart:SfChart.Title>
+
+      <chart:SfChart.BindingContext>
+        <local:ViewModel/>
+      </chart:SfChart.BindingContext>
+
+      <chart:SfChart.PrimaryAxis>
+        <chart:CategoryAxis EdgeLabelsDrawingMode="Shift">
+          <chart:CategoryAxis.Title>
+            <chart:ChartAxisTitle Text="Year"/>
+          </chart:CategoryAxis.Title>
+        </chart:CategoryAxis>
+      </chart:SfChart.PrimaryAxis>
+
+      <chart:SfChart.SecondaryAxis>
+        <chart:NumericalAxis Maximum="0" Minimum="100" Interval="10">
+          <chart:NumericalAxis.Title>
+            <chart:ChartAxisTitle Text="GDP (%) Per Annum"/>
+          </chart:NumericalAxis.Title>
+        </chart:NumericalAxis>
+      </chart:SfChart.SecondaryAxis>
+
+      <chart:SfChart.Legend>
+        <chart:ChartLegend ToggleSeriesVisibility="True" DockPosition="Bottom"/>
+      </chart:SfChart.Legend>
+
+      <chart:SfChart.Series>
+        <chart:StackingColumn100Series ItemsSource="{Binding StackedColumnData1}" XBindingPath="Name" YBindingPath="Value" Label="US" LegendIcon="Rectangle" EnableTooltip="True" EnableAnimation="True">
+          </chart:StackingColumn100Series>
+
+        <chart:StackingColumn100Series ItemsSource="{Binding StackedColumnData2}" XBindingPath="Name" YBindingPath="Value" Label="India" LegendIcon="Rectangle" EnableTooltip="True" EnableAnimation="True">
+           </chart:StackingColumn100Series>
+
+        <chart:StackingColumn100Series ItemsSource="{Binding StackedColumnData3}" XBindingPath="Name" YBindingPath="Value" Label="China" LegendIcon="Rectangle" EnableTooltip="True" EnableAnimation="True">
+           </chart:StackingColumn100Series>
+        
+        <chart:StackingColumn100Series ItemsSource="{Binding StackedColumnData4}" XBindingPath="Name" YBindingPath="Value" Label="Canada" LegendIcon="Rectangle" EnableTooltip="True" EnableAnimation="True">
+        </chart:StackingColumn100Series>
+
+      </chart:SfChart.Series>
+
+    </chart:SfChart>
+
+  </local:SamplePage.ContentView>
+
+</local:SamplePage>

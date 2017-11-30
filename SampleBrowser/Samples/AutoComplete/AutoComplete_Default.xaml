@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SamplePage
+ xmlns="http://xamarin.com/schemas/2014/forms" xmlns:local="clr-namespace:SampleBrowser;assembly=SampleBrowser" xmlns:autocomplete="clr-namespace:Syncfusion.SfAutoComplete.XForms;assembly=Syncfusion.SfAutoComplete.XForms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.AutoComplete_Default">
+	<local:SamplePage.ContentView >
+  <Grid x:Name="sampleLayout" >
+  	<Grid.RowDefinitions>
+  		<RowDefinition Height="60"/>
+  		<RowDefinition Height="*"/>
+  		<RowDefinition Height="*"/>
+  		<RowDefinition Height="*"/>
+  		<RowDefinition Height="*"/>
+  	</Grid.RowDefinitions>
+  	<Label Text="Job Search" Grid.Row="0" FontSize="20"  FontAttributes="Bold"  HorizontalOptions="Start" VerticalOptions="Center"/>
+  	<StackLayout Orientation="Vertical" Grid.Row="1" >
+  		<Label Text="Country" HeightRequest="30" FontSize="16"   HorizontalOptions="Start"/>
+  		<autocomplete:SfAutoComplete Watermark="Enter  Country Name" x:Name="countryAutoComplete" SuggestionMode="StartsWith" AutoCompleteMode="Suggest" HeightRequest="40" MinimumPrefixCharacters="1" MaximumDropDownHeight="300"  AutoCompleteSource="{Binding }" />
+  	</StackLayout>
+  	<StackLayout Orientation="Vertical" Grid.Row="2" >
+  		<Label Text="Job Field" HeightRequest="30"  FontSize="16"  HorizontalOptions="Start"/>
+  		<autocomplete:SfAutoComplete Watermark="Enter 'B' , 'S' , 'M' to start" x:Name="jobFieldAutoComplete" SuggestionMode="StartsWith" AutoCompleteMode="Suggest" HeightRequest="40" MinimumPrefixCharacters="1" MaximumDropDownHeight="300" AutoCompleteSource="{Binding }"  />
+  	</StackLayout>
+  	<StackLayout Orientation="Vertical" Grid.Row="3" Padding="0, 0, 0, 40">
+  		<Label Text="Experience" HeightRequest="30" FontSize="16" HorizontalOptions="Start"/>
+  		<local:PickerExt x:Name="experiencePicker" >
+  		</local:PickerExt>
+				<StackLayout x:Name="buttonaStack">
+  		<Button Text="Search" x:Name="searchButton" BackgroundColor="Silver"/>
+					</StackLayout>
+  	</StackLayout>
+
+  </Grid>
+  </local:SamplePage.ContentView>
+   <local:SamplePage.PropertyView>
+   <StackLayout x:Name="optionLayout" Spacing="10">
+    	<StackLayout Orientation="Vertical" Grid.Row="0" Padding="10, 10, 0, 20" >
+    		<Label    Text="Suggestion Mode"  WidthRequest="150" VerticalOptions ="Center" HorizontalOptions ="Start"  FontFamily="Helvetica" FontSize="16" />
+        	<local:PickerExt x:Name="suggestionModepicker"  IsEnabled="true"/>
+    	</StackLayout>
+    	<StackLayout Orientation="Vertical" Grid.Row="1" Padding="10, 10, 0, 20" >
+        	<Label    Text="AutoComplete Mode" WidthRequest="150" VerticalOptions ="Center" HorizontalOptions ="Start"  FontFamily="Helvetica" FontSize="16" />
+        	<local:PickerExt x:Name="autoCompleteModepicker" />
+    	</StackLayout>
+     <Grid Grid.Row="3" Padding="10, 10, 0, 20">
+
+       <Grid.ColumnDefinitions>
+         <ColumnDefinition Width="2*"/>
+         <ColumnDefinition Width="2*"/>
+       </Grid.ColumnDefinitions>
+       <Label   x:Name="minimumPrefixCharacterLabel"  Text="Minimum Prefix Character"    VerticalOptions ="CenterAndExpand" HorizontalOptions ="Start"  FontFamily="Helvetica" FontSize="16" />
+       <Entry x:Name="minPrefixCharacterText" HorizontalOptions ="End" Grid.Column="1"  Text="1" WidthRequest ="150" VerticalOptions ="Center"/>
+     </Grid>
+
+
+
+     <Grid Grid.Row="4" Padding="10, 10, 0, 20">
+       <Grid.ColumnDefinitions>
+         <ColumnDefinition Width="2*"/>
+         <ColumnDefinition Width="2*"/>
+       </Grid.ColumnDefinitions>
+       <Label   x:Name="maximumDropDownHeightLabel"  Text="Maximum DropDown Height"    VerticalOptions ="CenterAndExpand" HorizontalOptions ="Start"  FontFamily="Helvetica" FontSize="16" />
+       <Entry x:Name="maximumDropDownHeightText" HorizontalOptions ="End" Grid.Column="1"  Text="200" WidthRequest ="150" VerticalOptions ="Center"/>
+     </Grid>
+
+
+     <Grid Grid.Row="5" Padding="10, 10, 0, 20">
+       <Grid.ColumnDefinitions>
+         <ColumnDefinition Width="2*"/>
+         <ColumnDefinition Width="2*"/>
+       </Grid.ColumnDefinitions>
+       <Label   x:Name="popupDelayLabel"  Text="PopUp Delay"    VerticalOptions ="CenterAndExpand" HorizontalOptions ="Start"  FontFamily="Helvetica" FontSize="16" />
+       <Entry x:Name="PopupDelayText" HorizontalOptions ="End"  Text="400" Grid.Column="1" WidthRequest ="150" VerticalOptions ="Center"/>
+     </Grid>
+    </StackLayout>
+  </local:SamplePage.PropertyView>
+</local:SamplePage>

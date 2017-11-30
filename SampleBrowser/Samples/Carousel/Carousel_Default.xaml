@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SamplePage
+			xmlns:local="clr-namespace:SampleBrowser;assembly=SampleBrowser"
+            xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:carousel="clr-namespace:Syncfusion.SfCarousel.XForms;assembly=Syncfusion.SfCarousel.XForms"
+            x:Class="SampleBrowser.Carousel_Default">
+  <local:SamplePage.Resources>
+    <ResourceDictionary>
+      <DataTemplate x:Key="itemTemplate">
+        <Image Source="{Binding Image}" Aspect="AspectFit"/>
+      </DataTemplate>
+    </ResourceDictionary>
+  </local:SamplePage.Resources>
+
+  <local:SamplePage.ContentView >
+    <carousel:SfCarousel x:Name="carousel" ScaleOffset="1"  ItemTemplate="{StaticResource itemTemplate}"   SelectedIndex="2" HeightRequest="400" WidthRequest="800" />
+  </local:SamplePage.ContentView>
+  <local:SamplePage.PropertyView>
+    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" x:Name="optionLayout">
+      <Grid Padding="0,0,0,30"  HorizontalOptions="StartAndExpand">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="2*"/>
+          <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Label  TextColor="Gray" FontSize="20" Text="Offset" VerticalOptions="Center"  x:Name="offsetLabel" HorizontalOptions="Start" />
+        <Entry WidthRequest="150" Text="60" x:Name="offset" HorizontalOptions="End"/>
+      </Grid>
+      <Grid Padding="0,0,0,30" HorizontalOptions="StartAndExpand">
+
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="2*"/>
+          <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Label  TextColor="Gray" FontSize="20"  x:Name="scaleLabel" VerticalOptions="Center" Text="Scale Offset" HorizontalOptions="Start" />
+        <Entry WidthRequest="150" Text="0.8" x:Name="scale" HorizontalOptions="End"/>
+      </Grid>
+      <Grid Padding="0,0,0,30"  HorizontalOptions="StartAndExpand">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="2*"/>
+          <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Label  TextColor="Gray" FontSize="20"  x:Name="rotateLabel" Text="Rotation Angle" VerticalOptions="Center" HorizontalOptions="Start"/>
+        <Entry WidthRequest="150" Text="45" x:Name="rotateangle" HorizontalOptions="End"/>
+      </Grid>
+      <StackLayout Orientation="Vertical" Grid.Row="0">
+        <Label Text="Visual Mode"   TextColor="Gray" FontSize="20"  VerticalOptions="Center" HorizontalOptions="Start"  HeightRequest= "35" />
+        <local:PickerExt x:Name="viewmodePicker" HeightRequest="40" VerticalOptions="Start"   />
+      </StackLayout>
+    </StackLayout>
+  </local:SamplePage.PropertyView>
+</local:SamplePage>

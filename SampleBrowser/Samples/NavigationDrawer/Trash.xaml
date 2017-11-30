@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.Trash">
+	<ContentView.Content>
+
+	<StackLayout Orientation="Vertical" x:Name="mainContentView"  BackgroundColor="White">
+
+  	<Grid BackgroundColor="#1aa1d6">
+  		<Label x:Name="headLabel" FontSize="15" BackgroundColor="#1aa1d6" Text="Trash"  Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"     HeightRequest="50"  TextColor="White"/>
+  		<Button  FontSize="20" x:Name="btn" HeightRequest="50" Grid.Column="0" Clicked="Btn_Clicked" BackgroundColor="#1aa1d6" HorizontalOptions="Start" WidthRequest="50"/>
+  	</Grid>
+  	<StackLayout Orientation="Vertical" Padding="10" VerticalOptions="FillAndExpand" BackgroundColor="White">
+	<StackLayout Orientation="Vertical">
+			<Label HeightRequest="25"  Text="Xavier" FontSize="18"/>
+			<Label HeightRequest="15"  Text="Hi Xavier, See you at 2PM" FontSize="12"/>
+		</StackLayout>
+
+		<BoxView HeightRequest="1" BackgroundColor="Gray"/>
+
+	<StackLayout Orientation="Vertical">
+			<Label HeightRequest="25" WidthRequest="200" Text="Ruben" FontSize="18"/>
+			<Label HeightRequest="15" WidthRequest="200" Text="Hi Ruben, See you at 9PM" FontSize="12"/>
+		</StackLayout>
+
+		<BoxView HeightRequest="1" BackgroundColor="Gray"/> 
+
+
+		<StackLayout Orientation="Vertical">
+			<Label HeightRequest="25"  Text="Gonzalez" FontSize="18"/>
+			<Label HeightRequest="15"  Text="Hi Gonzalez, See you at 4PM" FontSize="12"/>
+		</StackLayout>
+
+		<BoxView HeightRequest="1" BackgroundColor="Gray"/>
+
+
+
+		<StackLayout Orientation="Vertical">
+			<Label HeightRequest="25"  Text="Rodriguez" FontSize="18"/>
+			<Label HeightRequest="15"  Text="Hi Rodriguez, See you at 7PM" FontSize="12"/>
+		</StackLayout>
+
+		<BoxView HeightRequest="1" BackgroundColor="Gray"/>
+
+		<StackLayout Orientation="Vertical">
+			<Label HeightRequest="25" HorizontalTextAlignment="Start"  Text="Joey" FontSize="18"/>
+			<Label HeightRequest="15"  Text="Hi Joey, See you at 1PM" FontSize="12"/>
+		</StackLayout>
+
+		<BoxView HeightRequest="1" BackgroundColor="Gray"/>
+
+	</StackLayout>
+	</StackLayout>
+	</ContentView.Content>
+</ContentView>

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SamplePage
+             xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+              xmlns:local="clr-namespace:SampleBrowser;assembly=SampleBrowser"
+              xmlns="http://xamarin.com/schemas/2014/forms"
+              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              x:Class="SampleBrowser.Date">
+
+  <local:SamplePage.BindingContext>
+    <local:ViewModel/>
+  </local:SamplePage.BindingContext>
+
+  <local:SamplePage.ContentView>
+
+    <chart:SfChart HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+      <chart:SfChart.Title>
+        <chart:ChartTitle Text="Sales Comparison " />
+      </chart:SfChart.Title>
+
+      <chart:SfChart.BindingContext>
+        <local:ViewModel/>
+      </chart:SfChart.BindingContext>
+
+      <chart:SfChart.PrimaryAxis>
+        <chart:DateTimeAxis LabelRotationAngle="-45" EdgeLabelsDrawingMode="Shift">
+          <chart:DateTimeAxis.Title>
+            <chart:ChartAxisTitle Text ="Sales Across Years"/>
+          </chart:DateTimeAxis.Title>
+          <chart:DateTimeAxis.LabelStyle>
+            <chart:ChartAxisLabelStyle LabelFormat = "MM/yyyy"/>
+            </chart:DateTimeAxis.LabelStyle>
+        </chart:DateTimeAxis>
+      </chart:SfChart.PrimaryAxis>
+
+      <chart:SfChart.SecondaryAxis>
+        <chart:NumericalAxis Minimum="0" Maximum="100" Interval="10">
+          <chart:NumericalAxis.Title>
+            <chart:ChartAxisTitle Text ="Sales Amount in millions (USD)"/>
+          </chart:NumericalAxis.Title>
+          <chart:NumericalAxis.LabelStyle>
+            <chart:ChartAxisLabelStyle LabelFormat = "$##.##"/>
+          </chart:NumericalAxis.LabelStyle>
+        </chart:NumericalAxis>
+      </chart:SfChart.SecondaryAxis>
+
+      <chart:SfChart.Series>
+        <chart:LineSeries ItemsSource="{Binding DateTimeData}" XBindingPath="date" YBindingPath="Value" StrokeWidth="5" EnableTooltip="True">
+       </chart:LineSeries>
+      </chart:SfChart.Series>
+    </chart:SfChart>
+
+  </local:SamplePage.ContentView>
+
+</local:SamplePage>

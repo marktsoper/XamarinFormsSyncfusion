@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SamplePage x:Class="SampleBrowser.SwipeDelete"
+                  xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:local="clr-namespace:SampleBrowser;assembly=SampleBrowser"
+                  xmlns:sfgrid="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms">
+
+    <local:SamplePage.BindingContext>
+        <local:SwipingViewModel x:Name="viewModel" />
+    </local:SamplePage.BindingContext>
+
+    <local:SamplePage.ContentView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="0"
+                   BackgroundColor="White"
+                   FontSize="15"
+                   Text="Swipe to Delete"
+                   TextColor="Black"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center" />
+
+            <sfgrid:SfDataGrid x:Name="dataGrid"
+                               Grid.Row="1"
+                               AllowSwiping="true"
+                               AutoGenerateColumns="false"
+                               ColumnSizer="Star"
+                               PropertyChanged="dataGrid_PropertyChanged"
+                               SwipeEnded="dataGrid_SwipeEnded"
+                               SwipeStarted="dataGrid_SwipeStarted">
+
+                <sfgrid:SfDataGrid.HeaderRowHeight>
+                    <OnPlatform Android="40"
+                                WinPhone="55"
+                                iOS="40"
+                                x:TypeArguments="x:Double" />
+                </sfgrid:SfDataGrid.HeaderRowHeight>
+
+                <sfgrid:SfDataGrid.Columns x:TypeArguments="sfgrid:Columns">
+
+                    <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                                           HeaderText="Order ID"
+                                           HeaderTextAlignment="Start"
+                                           MappingName="OrderID"
+                                           Padding="5,0,5,0"
+                                           LineBreakMode="TailTruncation"
+                                           TextAlignment="End">
+                        <sfgrid:GridTextColumn.HeaderCellTextSize>
+                            <OnPlatform Android="14"
+                                        WinPhone="12"
+                                        iOS="12"
+                                        x:TypeArguments="x:Double" />
+                        </sfgrid:GridTextColumn.HeaderCellTextSize>
+                        <sfgrid:GridTextColumn.CellTextSize>
+                            <OnPlatform Android="14"
+                                        WinPhone="12"
+                                        iOS="12"
+                                        x:TypeArguments="x:Double" />
+                        </sfgrid:GridTextColumn.CellTextSize>
+                    </sfgrid:GridTextColumn>
+
+                    <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                                           HeaderText="Employee ID"
+                                           HeaderTextAlignment="Start"
+                                           MappingName="EmployeeID"
+                                           Padding="5,0,5,0"
+                                           LineBreakMode="TailTruncation"
+                                           TextAlignment="End">
+                        <sfgrid:GridTextColumn.HeaderCellTextSize>
+                            <OnPlatform Android="14"
+                                        WinPhone="12"
+                                        iOS="12"
+                                        x:TypeArguments="x:Double" />
+                        </sfgrid:GridTextColumn.HeaderCellTextSize>
+                        <sfgrid:GridTextColumn.CellTextSize>
+                            <OnPlatform Android="14"
+                                        WinPhone="12"
+                                        iOS="12"
+                                        x:TypeArguments="x:Double" />
+                        </sfgrid:GridTextColumn.CellTextSize>
+                    </sfgrid:GridTextColumn>
+
+                    <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                                           HeaderText="Customer ID"
+                                           HeaderTextAlignment="Start"
+                                           MappingName="CustomerID"
+                                           Padding="5, 0, 0, 0"
+                                           LineBreakMode="TailTruncation"
+                                           TextAlignment="Start">
+                        <sfgrid:GridTextColumn.HeaderCellTextSize>
+                            <OnPlatform Android="14"
+                                        WinPhone="12"
+                                        iOS="12"
+                                        x:TypeArguments="x:Double" />
+                        </sfgrid:GridTextColumn.HeaderCellTextSize>
+                        <sfgrid:GridTextColumn.CellTextSize>
+                            <OnPlatform Android="14"
+                                        WinPhone="12"
+                                        iOS="12"
+                                        x:TypeArguments="x:Double" />
+                        </sfgrid:GridTextColumn.CellTextSize>
+                    </sfgrid:GridTextColumn>
+
+                    <sfgrid:GridTextColumn HeaderFontAttribute="Bold"
+                                           HeaderText="Customer Name"
+                                           HeaderTextAlignment="Start"
+                                           MappingName="FirstName"
+                                           Padding="5, 0, 0, 0"
+                                           LineBreakMode="TailTruncation"
+                                           TextAlignment="Start">
+                        <sfgrid:GridTextColumn.HeaderCellTextSize>
+                            <OnPlatform Android="14"
+                                        WinPhone="12"
+                                        iOS="12"
+                                        x:TypeArguments="x:Double" />
+                        </sfgrid:GridTextColumn.HeaderCellTextSize>
+                        <sfgrid:GridTextColumn.CellTextSize>
+                            <OnPlatform Android="14"
+                                        WinPhone="12"
+                                        iOS="12"
+                                        x:TypeArguments="x:Double" />
+                        </sfgrid:GridTextColumn.CellTextSize>
+                    </sfgrid:GridTextColumn>
+
+                </sfgrid:SfDataGrid.Columns>
+                <sfgrid:SfDataGrid.LeftSwipeTemplate>
+                    <DataTemplate>
+                        <ContentView BackgroundColor="#1AAA87" BindingContextChanged="leftTemplate_BindingContextChanged">
+                            <Grid IsVisible="False">
+                                <Grid.ColumnDefinitions>
+                                  <ColumnDefinition Width ="20" />
+                                  <ColumnDefinition Width ="*" />
+                                    <ColumnDefinition Width ="75"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="1"
+                                       FontSize="15"
+                                       LineBreakMode="NoWrap"
+                                       Text="Deleted"
+                                       TextColor="White"
+                                       HorizontalTextAlignment="Start"
+                                       VerticalTextAlignment="Center" />
+                                <Label BindingContextChanged="label_BindingContextChanged"
+                                       Grid.Column="2"
+                                       FontSize="15"
+                                       FontAttributes="Bold"
+                                       HorizontalOptions="Center"
+                                       LineBreakMode="NoWrap"
+                                       Text="UNDO"
+                                       TextColor="White"
+                                       HorizontalTextAlignment="End"
+                                       VerticalTextAlignment="Center" />
+                            </Grid>
+                        </ContentView>
+                    </DataTemplate>
+                </sfgrid:SfDataGrid.LeftSwipeTemplate>
+
+                <sfgrid:SfDataGrid.RightSwipeTemplate>
+                    <DataTemplate>
+                        <ContentView BackgroundColor="#1AAA87" BindingContextChanged="rightTemplate_BindingContextChanged">
+                            <Grid IsVisible="False">
+                                <Grid.ColumnDefinitions>
+                                  <ColumnDefinition Width ="20" />
+                                  <ColumnDefinition Width ="*" />
+                                  <ColumnDefinition Width ="75"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="1"
+                                       FontSize="15"
+                                       LineBreakMode="NoWrap"
+                                       Text="Deleted"
+                                       TextColor="White"
+                                       HorizontalTextAlignment="Start"
+                                       VerticalTextAlignment="Center"
+                                       />
+                              <Label Grid.Column="2"
+                                     BindingContextChanged="label_BindingContextChanged"
+                                     FontSize="15"
+                                     FontAttributes="Bold"
+                                     HorizontalOptions="Center"
+                                     LineBreakMode="NoWrap"
+                                     Text="UNDO"
+                                     TextColor="White"
+                                     HorizontalTextAlignment="End"
+                                     VerticalTextAlignment="Center" />
+                            </Grid>
+                        </ContentView>
+                    </DataTemplate>
+                </sfgrid:SfDataGrid.RightSwipeTemplate>
+
+            </sfgrid:SfDataGrid>
+        </Grid>
+    </local:SamplePage.ContentView>
+
+</local:SamplePage>

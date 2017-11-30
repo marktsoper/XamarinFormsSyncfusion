@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:SamplePage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:local="clr-namespace:SampleBrowser;assembly=SampleBrowser" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:rotate="clr-namespace:Syncfusion.SfRotator.XForms;assembly=Syncfusion.SfRotator.XForms" x:Class="SampleBrowser.Rotator_Default">  
+  <local:SamplePage.ContentView>
+    <Grid VerticalOptions="Center">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="2.5*" />
+        <RowDefinition Height="5" />
+        <RowDefinition Height="2*" />
+      </Grid.RowDefinitions>
+      <rotate:SfRotator x:Name="sfRotator"  Grid.Row="0" NavigationDelay="2000" ItemsSource="{Binding ImageCollection}" SelectedIndex="2" NavigationDirection="Horizontal" NavigationStripMode="Dots" BackgroundColor="#ececec" NavigationStripPosition="Bottom">
+        <rotate:SfRotator.ItemTemplate>
+          <DataTemplate>
+            <Image  Source="{Binding Image}">
+              <Image.Aspect>
+                <OnPlatform x:TypeArguments="Aspect">
+      			        <OnPlatform.Android>
+        			          AspectFill
+      			        </OnPlatform.Android>
+    		        </OnPlatform>
+              </Image.Aspect>
+            </Image>
+          </DataTemplate>
+        </rotate:SfRotator.ItemTemplate>
+      </rotate:SfRotator>
+      <Label  HeightRequest="5" Grid.Row="1"/>
+      <ScrollView Grid.Row="2">
+        <StackLayout Spacing="40">
+          <StackLayout Spacing="10">
+            <Label x:Name="directionLabel" Text="Navigation Direction" FontSize="16"  YAlign="End" TextColor="Gray" />
+            <local:PickerExt x:Name="directionPicker" HeightRequest="40" SelectedIndex="1" />
+          </StackLayout>
+          <StackLayout Spacing="10">
+            <Label Text="Navigation Strip Position" x:Name="tabLabel" FontSize="16"  YAlign="End" TextColor="Gray" />
+            <local:PickerExt x:Name="tabPicker" HeightRequest="40" SelectedIndex="1" />
+          </StackLayout>
+          <StackLayout Spacing="10">
+            <Label Text="Navigation Strip Mode" x:Name="modeLabel" FontSize="16" YAlign="End" TextColor="Gray" />
+            <local:PickerExt x:Name="modePicker" HeightRequest="40" SelectedIndex="1" />
+          </StackLayout>
+          <Grid>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="2*" />
+              <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <Label TextColor="#282828" x:Name="emptyLabel" Text="Enable AutoPlay" VerticalOptions="Center" HorizontalOptions="Start" FontFamily="Helvetica" FontSize="16" />
+            <Switch x:Name="toggleButton" IsToggled="False" Grid.Column="1" HorizontalOptions="End"  VerticalOptions="Center" />
+          </Grid>
+        </StackLayout>
+      </ScrollView>
+    </Grid>
+  </local:SamplePage.ContentView>
+</local:SamplePage>

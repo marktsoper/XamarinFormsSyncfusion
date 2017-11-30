@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:SamplePage
+ xmlns="http://xamarin.com/schemas/2014/forms" xmlns:local="clr-namespace:SampleBrowser;assembly=SampleBrowser" xmlns:numeric="clr-namespace:Syncfusion.SfNumericUpDown.XForms;assembly=Syncfusion.SfNumericUpDown.XForms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.NumericUpDown_Default">
+  <local:SamplePage.ContentView >
+    <Grid x:Name="sampleLayout" >
+      <Grid.RowDefinitions>        
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="4*"/>
+      </Grid.RowDefinitions>
+      <StackLayout Orientation="Vertical" Grid.Row="0">
+        <Label x:Name="adultLabel" Text = "Number of Adults" HeightRequest = "40" FontSize="18"  HorizontalOptions = "Start"/>
+        <numeric:SfNumericUpDown MaximumDecimalDigits="2"  HeightRequest = "35" TextColor="Black"  x:Name="adultNumericUpDown"  AllowNull="true" HorizontalOptions="Start" VerticalOptions="Center" FormatString="n" Watermark="Enter the Number of adult"  Value="5" />
+      </StackLayout>
+      <StackLayout Orientation="Vertical" Grid.Row="1">
+        <Label x:Name="infantsLabel"   Text = "Number of infants" HeightRequest = "40" FontSize="18"  HorizontalOptions = "Start"/>
+        <numeric:SfNumericUpDown MaximumDecimalDigits="2"  HeightRequest = "35" TextColor="Black" x:Name="infantsNumericUpDown"  AllowNull="true" HorizontalOptions="Start" VerticalOptions="Center" FormatString="n" Watermark="Enter the Number of infants" Value="2" />
+      </StackLayout>
+      
+
+    </Grid>
+  </local:SamplePage.ContentView>
+  <local:SamplePage.PropertyView>
+    <StackLayout x:Name="optionLayout" Spacing="20">
+      <Grid HeightRequest="80" >
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="2*"/>
+          <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Label   x:Name="minimumValueLabel"  Text="MinimumValue"    VerticalOptions ="CenterAndExpand" HorizontalOptions ="Start"  FontFamily="Helvetica" FontSize="18" />
+        <Entry x:Name="minimumValueText" Grid.Column="1" HorizontalOptions ="End" Keyboard="Numeric" WidthRequest ="130" VerticalOptions ="Center" Text="0" />
+      </Grid>
+      <Grid HeightRequest="80">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="2*"/>
+          <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Label   x:Name="maximumValueLabel"  Text="MaximumValue"    VerticalOptions ="CenterAndExpand" HorizontalOptions ="Start"  FontFamily="Helvetica" FontSize="18" />
+        <Entry x:Name="maximumValueText" Grid.Column="1"  Text="100" Keyboard="Numeric" HorizontalOptions ="End" WidthRequest ="130" VerticalOptions ="Center"/>
+      </Grid>
+      <Grid HeightRequest="80" >
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="2*"/>
+          <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Label  x:Name="autoReverseLabel"  Text="AutoReverse" VerticalOptions ="Center" HorizontalOptions ="Start"  FontFamily="Helvetica" FontSize="18" />
+        <Switch x:Name="autoReverseToggle" Grid.Column="1" HorizontalOptions="End" WidthRequest="130" IsToggled="false" VerticalOptions ="Center"/>
+      </Grid>
+      <StackLayout Orientation="Vertical" Grid.Row="3">
+        <Label  x:Name="spinButtonAlignmentLabel" Text="SpinButtonAlignment" FontSize="18" HeightRequest="40"   HorizontalOptions="Start" VerticalOptions="StartAndExpand" />
+        <local:PickerExt x:Name="localePicker" />
+      </StackLayout>
+    </StackLayout>
+  </local:SamplePage.PropertyView>
+</local:SamplePage>

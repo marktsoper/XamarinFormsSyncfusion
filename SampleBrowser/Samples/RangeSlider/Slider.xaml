@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:SamplePage
+ xmlns="http://xamarin.com/schemas/2014/forms" xmlns:local="clr-namespace:SampleBrowser;assembly=SampleBrowser" xmlns:slide="clr-namespace:Syncfusion.SfRangeSlider.XForms;assembly=Syncfusion.SfRangeSlider.XForms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.Slider">
+  <local:SamplePage.ContentView>
+    <Grid  VerticalOptions="Center">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="2*"/>
+        <RowDefinition Height="*"/>
+      </Grid.RowDefinitions>
+      <Image x:Name="mountImg" HeightRequest="350" WidthRequest="350"/>
+      <StackLayout Orientation="Vertical" x:Name="sampleLayout" Grid.Row="1">
+      <Label Text="Opacity" x:Name="opacityLabel"/>
+        <slide:SfRangeSlider x:Name="sfRangeSlider1" ShowRange = "false" HeightRequest ="80" ToolTipPlacement="None" WidthRequest = "200" Minimum = "0" Maximum = "100" TickFrequency = "20" ShowValueLabel = "true" Value = "100" SnapsTo ="None" Orientation="Horizontal" TickPlacement="BottomRight"/>
+      </StackLayout>
+        </Grid>
+  </local:SamplePage.ContentView>
+</local:SamplePage>

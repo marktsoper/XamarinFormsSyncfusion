@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SamplePage
+             xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+              xmlns:local="clr-namespace:SampleBrowser;assembly=SampleBrowser"
+              xmlns="http://xamarin.com/schemas/2014/forms"
+              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              x:Class="SampleBrowser.Spline">
+
+  <local:SamplePage.BindingContext>
+    <local:ViewModel/>
+  </local:SamplePage.BindingContext>
+
+  <local:SamplePage.ContentView>
+
+    <chart:SfChart HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+      <chart:SfChart.Title>
+        <chart:ChartTitle Text="Climate Graph - 2012"/>
+      </chart:SfChart.Title>
+
+      <chart:SfChart.BindingContext>
+        <local:ViewModel/>
+      </chart:SfChart.BindingContext>
+
+      <chart:SfChart.PrimaryAxis>
+        <chart:CategoryAxis EdgeLabelsDrawingMode="Shift" LabelPlacement="BetweenTicks">
+          <chart:CategoryAxis.Title>
+            <chart:ChartAxisTitle Text="Month" Font="15"/>
+          </chart:CategoryAxis.Title>
+        </chart:CategoryAxis>
+      </chart:SfChart.PrimaryAxis>
+
+      <chart:SfChart.SecondaryAxis>
+        <chart:NumericalAxis Maximum="35" Minimum="-5" Interval="5">
+          <chart:NumericalAxis.Title>
+            <chart:ChartAxisTitle Text="Temperature in Celsius"/>
+          </chart:NumericalAxis.Title>
+        </chart:NumericalAxis>
+      </chart:SfChart.SecondaryAxis>
+
+      <chart:SfChart.Legend>
+        <chart:ChartLegend DockPosition="Bottom" ToggleSeriesVisibility="True"/>
+      </chart:SfChart.Legend>
+           
+      <chart:SfChart.Series>
+        <chart:SplineSeries ItemsSource="{Binding SplineData1}" XBindingPath="Name" YBindingPath="Value" StrokeWidth = "3" Label="London" LegendIcon="Rectangle" EnableTooltip="True" EnableAnimation="True">
+          <chart:SplineSeries.DataMarker>
+            <chart:ChartDataMarker ShowMarker="True" MarkerColor="#FEBE17" MarkerBorderColor="#FEBE17" ShowLabel="False" MarkerHeight="8" MarkerWidth="8"/>
+          </chart:SplineSeries.DataMarker>
+        </chart:SplineSeries>
+                
+        <chart:SplineSeries ItemsSource="{Binding SplineData2}" XBindingPath="Name" YBindingPath="Value" StrokeWidth = "3" Label="France" LegendIcon="Rectangle" EnableTooltip="True" EnableAnimation="True">
+          <chart:SplineSeries.DataMarker>
+            <chart:ChartDataMarker ShowMarker="True" MarkerColor="#4F4838" MarkerBorderColor="#4F4838" ShowLabel="False" MarkerHeight="8" MarkerWidth="8"/>
+          </chart:SplineSeries.DataMarker>
+        </chart:SplineSeries>
+      </chart:SfChart.Series>
+
+    </chart:SfChart>
+
+  </local:SamplePage.ContentView>
+
+</local:SamplePage>

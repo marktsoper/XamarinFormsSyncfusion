@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:SamplePage
+ xmlns="http://xamarin.com/schemas/2014/forms" xmlns:local="clr-namespace:SampleBrowser;assembly=SampleBrowser" xmlns:linear="clr-namespace:Syncfusion.SfGauge.XForms;assembly=Syncfusion.SfGauge.XForms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.LinearGauge_Default">
+  <local:SamplePage.ContentView >
+    <Grid BackgroundColor="White" Padding="10"  >
+      <Grid.RowDefinitions>
+        <RowDefinition Height ="50"/>
+        <RowDefinition Height ="*"/>
+      </Grid.RowDefinitions>
+      <Label x:Name="gettingStarted" Text = "Memory Usage" FontSize="20" HorizontalOptions="Center" HeightRequest = "50" XAlign="Center" TextColor = "Black"  WidthRequest="400"/>
+      <linear:SfLinearGauge x:Name="linearGauge" Grid.Row="1" BackgroundColor="White" Orientation="OrientationVertical" Scales="{Binding }" HeightRequest="400" WidthRequest="800"/>
+    </Grid>
+  </local:SamplePage.ContentView>
+</local:SamplePage>

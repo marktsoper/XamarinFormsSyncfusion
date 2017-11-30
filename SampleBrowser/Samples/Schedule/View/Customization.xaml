@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<local:SamplePage   xmlns:schedule="clr-namespace:Syncfusion.SfSchedule.XForms;assembly=Syncfusion.SfSchedule.XForms"
+		  xmlns:local="clr-namespace:SampleBrowser;assembly=SampleBrowser"
+		xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		x:Class="SampleBrowser.Customization">
+
+	<local:SamplePage.ContentView>
+
+		<Grid x:Name="grid_layout">
+     
+			<Grid.RowDefinitions>
+				<RowDefinition Height="0.1*" />
+				<RowDefinition Height="0.9*" />
+			</Grid.RowDefinitions>
+			<Grid Grid.Row="0" BackgroundColor="#D3D3D3"  x:Name="header_layout" >
+				<Label x:Name="month_label" VerticalOptions="Center" Margin="20,0,0,0" FontSize="20" TextColor="Black" BackgroundColor="#D3D3D3" />
+			</Grid>
+	
+			<schedule:SfSchedule Grid.Row="1"
+					  x:Name="Schedule" 
+					HorizontalOptions="FillAndExpand"
+					VerticalOptions="FillAndExpand"> 
+			</schedule:SfSchedule>
+		</Grid>
+	</local:SamplePage.ContentView>
+	<local:SamplePage.Padding>
+    <OnPlatform x:TypeArguments="Thickness">
+			<OnPlatform.iOS>
+				0, 0, 0, 90
+			</OnPlatform.iOS>
+			<OnPlatform.Android>
+				-10, -10, -10, -20
+			</OnPlatform.Android>
+			<OnPlatform.WinPhone>
+				-10, -10, -10, -20
+			</OnPlatform.WinPhone>
+		</OnPlatform>
+	</local:SamplePage.Padding>
+  </local:SamplePage>

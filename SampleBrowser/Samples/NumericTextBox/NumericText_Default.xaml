@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:SamplePage
+ xmlns="http://xamarin.com/schemas/2014/forms" xmlns:local="clr-namespace:SampleBrowser;assembly=SampleBrowser" xmlns:numeric="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.NumericText_Default">
+	<local:SamplePage.ContentView >
+<Grid >
+<Grid.RowDefinitions>
+<RowDefinition Height="Auto"/>
+<RowDefinition Height="Auto"/>
+<RowDefinition Height="Auto"/>
+<RowDefinition Height="4*"/>
+<RowDefinition Height="4*"/>
+<RowDefinition Height="4*"/>
+<RowDefinition Height="4*"/>
+</Grid.RowDefinitions>
+<Label x:Name="simpleInterestCalculatorLabel"  Grid.Row="0" Text = "Simple Interest Calculator" HeightRequest = "40" FontSize="22" FontAttributes="Bold" HorizontalOptions = "Center"/>
+<Label x:Name="findingSimpleInterestLabel" Grid.Row="1" Text = "The formula for finding simple interest is :" FontSize="20" HeightRequest = "45" HorizontalOptions = "Center"/>
+<Label x:Name="formulaLabel"  Text = "Interest = Principal * Rate * Time" Grid.Row="2" FontSize="20" HeightRequest = "40" HorizontalOptions = "Center"/>
+<StackLayout Orientation="Horizontal" HorizontalOptions="Center" Grid.Row="3">
+<Label x:Name="principalLabel"  Text = "Principal" FontSize="20" HeightRequest = "40" WidthRequest="200" VerticalOptions = "Center" HorizontalOptions = "End" />
+<numeric:SfNumericTextBox MaximumNumberDecimalDigits="2" x:Name="principalNumericTextBox"  AllowNull="false" HorizontalOptions="End" VerticalOptions="Center" FormatString="c" Watermark="Enter the Principal" Value="1000" />
+</StackLayout>
+<StackLayout Orientation="Horizontal" HorizontalOptions="Center" Grid.Row="4">
+<Label x:Name="interestRateLabel"  Text = "Interest Rate" FontSize="20" HeightRequest = "40"  WidthRequest="200" VerticalOptions = "Center" HorizontalOptions = "Start"/>
+<numeric:SfNumericTextBox MaximumNumberDecimalDigits="0" ValueChangeMode="OnKeyFocus"  PercentDisplayMode="Compute" x:Name="interestRateNumericTextBox" AllowNull="false" HorizontalOptions="End" VerticalOptions="Center" FormatString="p" Watermark="Enter the RI" Value="1" ParserMode="Decimal" />
+</StackLayout>
+<StackLayout Orientation="Horizontal" HorizontalOptions="Center" Grid.Row="5">
+<Label x:Name="termLabel"  Text = " Term" HeightRequest = "40" FontSize="20"  WidthRequest="200" VerticalOptions = "Center" HorizontalOptions = "Start" />
+<numeric:SfNumericTextBox MaximumNumberDecimalDigits="0" ValueChangeMode="OnKeyFocus"  x:Name="termNumericTextBox" AllowNull="false" HorizontalOptions="End" VerticalOptions="Center" FormatString="years" Watermark="Enter the Year" Value="20" />
+</StackLayout>
+<StackLayout Orientation="Horizontal" HorizontalOptions="Center" Grid.Row="6">
+<Label x:Name="interestLabel"  Text = " Interest" HeightRequest = "40" FontSize="20" WidthRequest="200" VerticalOptions = "Center" HorizontalOptions = "Start"/>
+<numeric:SfNumericTextBox MaximumNumberDecimalDigits="0" IsEnabled="false"  ValueChangeMode="OnKeyFocus" x:Name="interestNumericTextBox" AllowNull="false" HorizontalOptions="End" VerticalOptions="Center" FormatString="c" Watermark="Enter a number" Value="2000" />
+</StackLayout>
+</Grid>
+   </local:SamplePage.ContentView>
+   <local:SamplePage.PropertyView>
+   <StackLayout x:Name="optionLayout" Orientation="Vertical" Spacing="10">
+   <StackLayout Orientation="Vertical">
+   <Label  Text="Culture" FontSize="18" HeightRequest="40"  WidthRequest ="150" HorizontalOptions="Start" VerticalOptions="StartAndExpand" />
+   <local:PickerExt x:Name="localePicker" VerticalOptions="Center" HorizontalOptions="FillAndExpand"  HeightRequest="40"/>
+   </StackLayout>
+    
+     <Grid Padding="0,30,0,0">
+       <Grid.ColumnDefinitions>
+         <ColumnDefinition Width="2*"/>
+         <ColumnDefinition Width="2*"/>
+       </Grid.ColumnDefinitions>
+       <Label  x:Name="allowNullLabel"  Text="Allow Null"    VerticalOptions ="Center" HorizontalOptions ="Start"  FontFamily="Helvetica" FontSize="18" />
+       <Switch x:Name="allowNullToggle" HorizontalOptions ="End" Grid.Column="1" WidthRequest ="150" IsToggled="false" VerticalOptions ="Center"/>
+     </Grid>
+   </StackLayout>
+   </local:SamplePage.PropertyView>
+</local:SamplePage>

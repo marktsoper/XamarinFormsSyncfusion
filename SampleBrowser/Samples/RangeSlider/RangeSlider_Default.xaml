@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:SamplePage
+ xmlns="http://xamarin.com/schemas/2014/forms" xmlns:local="clr-namespace:SampleBrowser;assembly=SampleBrowser" xmlns:range="clr-namespace:Syncfusion.SfRangeSlider.XForms;assembly=Syncfusion.SfRangeSlider.XForms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SampleBrowser.RangeSlider_Default">
+	<local:SamplePage.ContentView>
+	<StackLayout x:Name="sampleLayout" Spacing="20">
+	<StackLayout  x:Name="sampleLayout1" Spacing="10">
+
+	      <StackLayout  Spacing="0" Orientation="Horizontal">
+	      <Label x:Name="departureLabel" Text="Departure" XAlign="Start" YAlign="End"/>
+	      <Label x:Name="timeLabel1" Text=" (in Hours)" FontSize = "10" HeightRequest = "22" YAlign = "Center" XAlign = "Start" />
+	      </StackLayout>
+
+         <StackLayout   Orientation="Horizontal">
+	      <Label x:Name="timeLabel5" Text="Time:"/>
+	      <Label x:Name="timeLabel3" FontSize = "12" Text = " 12 AM - 12 PM" HeightRequest = "22" YAlign = "Center" XAlign = "Start"/>
+	      </StackLayout>
+
+	      <StackLayout  Spacing="0"> 
+	      <range:SfRangeSlider x:Name="sfRangeSlider1" HeightRequest = "90" WidthRequest = "200" Minimum = "0"  Maximum="12"
+			RangeStart = "0" RangeEnd = "12" TickFrequency = "2" SnapsTo = "None" ToolTipPlacement="None" Orientation = "Horizontal" TickPlacement = "BottomRight"/>
+	      </StackLayout>
+
+	</StackLayout>
+	<StackLayout x:Name="sampleLayout2" Spacing="10">
+
+
+         <StackLayout  Spacing="0" Orientation="Horizontal">
+	      <Label x:Name="arrivalLabel" Text="Arrival" XAlign="Start" YAlign="End"/>
+	      <Label x:Name="timeLabel2" Text=" (in Hours)" FontSize = "10" HeightRequest = "22" YAlign = "Center" XAlign = "Start" />
+	      </StackLayout>
+
+	      <StackLayout   Orientation="Horizontal">
+	      <Label x:Name="timeLabel6" Text="Time:"/>
+	      <Label x:Name="timeLabel4" FontSize = "12" Text = "12 AM - 12 PM" HeightRequest = "22" YAlign = "Center" XAlign = "Start"/>
+	      </StackLayout>
+
+
+	      <StackLayout  Spacing="0"> 
+	      <range:SfRangeSlider x:Name="sfRangeSlider2" HeightRequest = "90" WidthRequest = "200" Minimum = "0"  Maximum="12"
+			RangeStart = "0" RangeEnd = "12" TickFrequency = "2" SnapsTo = "None" Orientation = "Horizontal" ToolTipPlacement="None" TickPlacement = "BottomRight"/>
+	      </StackLayout>
+
+	</StackLayout>
+	</StackLayout>
+	</local:SamplePage.ContentView>
+	<local:SamplePage.PropertyView>
+	<StackLayout x:Name="page4" Spacing="40">
+	<StackLayout  Spacing="40">
+	 <StackLayout  Spacing="40">
+	    <StackLayout  Spacing="10">
+	      <Label x:Name="placementLabel" Text = "LabePlacement" FontSize="18" HeightRequest = "20" YAlign = "End" TextColor = "Gray"/>
+	      <local:PickerExt x:Name="positionPicker1" HeightRequest = "40" SelectedIndex = "1" BackgroundColor="White"/>
+	   </StackLayout>
+
+	    <StackLayout  Spacing="10">
+	      <Label  Text = "Tick Placement" FontSize="18" HeightRequest = "20" YAlign = "End" TextColor = "Gray"/>
+	      <local:PickerExt x:Name="positionPicker2" HeightRequest = "40" SelectedIndex = "1" BackgroundColor="White"/>
+	</StackLayout>
+
+
+	
+     <Grid >
+     <Grid.ColumnDefinitions>
+       <ColumnDefinition Width="2*"/>
+       <ColumnDefinition Width="2*"/>
+     </Grid.ColumnDefinitions>
+     <Label  TextColor="Gray" x:Name="emptyLabel"  Text="Label"    VerticalOptions ="Center" HorizontalOptions ="Start"  FontFamily="Helvetica" FontSize="16" />
+     <Switch x:Name="toggleButton" IsToggled="true" Grid.Column="1" HorizontalOptions ="End" WidthRequest ="150"  VerticalOptions ="Center"/>
+     </Grid>
+
+
+	
+
+     <Grid >
+       <Grid.ColumnDefinitions>
+         <ColumnDefinition Width="2*"/>
+         <ColumnDefinition Width="2*"/>
+       </Grid.ColumnDefinitions>
+       <Label  TextColor="Gray" x:Name="snapsToLabel"  Text="Snaps To Tick" VerticalOptions ="Center" HorizontalOptions ="Start"  FontFamily="Helvetica" FontSize="16" />
+       <Switch x:Name="toggleButton2" IsToggled="false" Grid.Column="1" HorizontalOptions ="End" WidthRequest ="150"  VerticalOptions ="Center"/>
+     </Grid>
+  </StackLayout>
+	</StackLayout>
+
+	</StackLayout>
+
+   </local:SamplePage.PropertyView>
+</local:SamplePage>

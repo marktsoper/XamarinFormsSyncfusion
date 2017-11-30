@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SamplePage
+             xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+              xmlns:local="clr-namespace:SampleBrowser;assembly=SampleBrowser"
+              xmlns="http://xamarin.com/schemas/2014/forms"
+              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              x:Class="SampleBrowser.StackedArea100">
+
+  <local:SamplePage.BindingContext>
+    <local:ViewModel/>
+  </local:SamplePage.BindingContext>
+
+  <local:SamplePage.ContentView>
+
+    <chart:SfChart HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+      <chart:SfChart.Title>
+        <chart:ChartTitle Text="Annual Temperature Comparison" />
+      </chart:SfChart.Title>
+
+      <chart:SfChart.BindingContext>
+        <local:ViewModel/>
+      </chart:SfChart.BindingContext>
+
+      <chart:SfChart.PrimaryAxis>
+        <chart:CategoryAxis EdgeLabelsDrawingMode="Shift">
+          <chart:CategoryAxis.Title>
+            <chart:ChartAxisTitle Text="Year"/>
+          </chart:CategoryAxis.Title>
+        </chart:CategoryAxis>
+      </chart:SfChart.PrimaryAxis>
+
+      <chart:SfChart.SecondaryAxis>
+        <chart:NumericalAxis Maximum="0" Minimum="100" Interval="10">
+          <chart:NumericalAxis.Title>
+            <chart:ChartAxisTitle Text="Temperature (%)"/>
+          </chart:NumericalAxis.Title>
+        </chart:NumericalAxis>
+      </chart:SfChart.SecondaryAxis>
+
+      <chart:SfChart.Legend>
+        <chart:ChartLegend ToggleSeriesVisibility="True" DockPosition="Bottom"/>
+      </chart:SfChart.Legend>
+
+      <chart:SfChart.Series>
+            <chart:StackingArea100Series ItemsSource="{Binding StackedArea100Data1}" XBindingPath="Name" YBindingPath="Value"  Opacity="0.5" Label="USA" LegendIcon="Rectangle" EnableTooltip="True" EnableAnimation="True"/>
+            <chart:StackingArea100Series ItemsSource="{Binding StackedArea100Data2}" XBindingPath="Name" YBindingPath="Value"  Opacity="0.5" Label="India" LegendIcon="Rectangle" EnableTooltip="True" EnableAnimation="True"/>
+            <chart:StackingArea100Series ItemsSource="{Binding StackedArea100Data3}" XBindingPath="Name" YBindingPath="Value"  Opacity="0.5" Label="Canada" LegendIcon="Rectangle" EnableTooltip="True" EnableAnimation="True"/>
+            <chart:StackingArea100Series ItemsSource="{Binding StackedArea100Data4}" XBindingPath="Name" YBindingPath="Value"  Opacity="0.5" Label="China" LegendIcon="Rectangle" EnableTooltip="True" EnableAnimation="True"/>
+      </chart:SfChart.Series>
+    </chart:SfChart>
+
+  </local:SamplePage.ContentView>
+
+</local:SamplePage>

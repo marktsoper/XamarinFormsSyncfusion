@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<local:SamplePage
+             xmlns:local="clr-namespace:SampleBrowser;assembly=SampleBrowser"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleBrowser.FindAndReplacePage">
+
+  <local:SamplePage.ContentView>
+    <StackLayout>
+
+      <Label x:Name="SampleTitle"  Text = "Find and replace"              
+              FontSize="Large"
+              HorizontalOptions="Center"
+            VerticalOptions="CenterAndExpand">
+      </Label>
+      <Label></Label>
+      <Label x:Name="Content_1" Text="This sample demonstrates how to find and replace the data within the worksheet."
+                 FontSize="Medium" VerticalOptions="CenterAndExpand">
+      </Label>
+      <Label FontSize="Medium" >Find What:</Label>
+      <Picker x:Name="picker" />
+      <Label FontSize="Medium" >Replace What:</Label>
+      <Entry x:Name="entry"/>
+      <StackLayout>
+      <Grid>
+      <Grid.RowDefinitions>
+      <RowDefinition />
+      <RowDefinition />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+      <ColumnDefinition Width = "*"/>
+      <ColumnDefinition Width = "*"/>
+      </Grid.ColumnDefinitions>
+      <Label Text="Match Case:" Grid.Row = "0" Grid.Column ="0"  />
+      <Label Text="Match Entire Cell Content:" Grid.Row = "1" Grid.Column ="0"  />
+      <Switch Grid.Row = "0" Grid.Column ="1" x:Name="switch1"/>
+      <Switch Grid.Row = "1" Grid.Column ="1" x:Name="switch2"/>
+       </Grid>
+      </StackLayout>
+      <Button x:Name="btnGenerate" Clicked ="OnButtonClicked" Text ="Replace All" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"></Button>
+     
+    </StackLayout>
+  </local:SamplePage.ContentView>
+  <local:SamplePage.PropertyView>
+
+  </local:SamplePage.PropertyView>
+
+</local:SamplePage>

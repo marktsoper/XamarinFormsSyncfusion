@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:SamplePage
+             xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+              xmlns:local="clr-namespace:SampleBrowser;assembly=SampleBrowser"
+              xmlns="http://xamarin.com/schemas/2014/forms"
+              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              x:Class="SampleBrowser.Candle">
+
+  <local:SamplePage.BindingContext>
+    <local:ViewModel/>
+  </local:SamplePage.BindingContext>
+
+  <local:SamplePage.ContentView>
+
+    <chart:SfChart HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+      <chart:SfChart.Title>
+        <chart:ChartTitle Text="Foriegn Exchange Rate Analysis" />
+      </chart:SfChart.Title>
+
+      <chart:SfChart.BindingContext>
+        <local:ViewModel/>
+      </chart:SfChart.BindingContext>
+
+      <chart:SfChart.PrimaryAxis>
+        <chart:DateTimeAxis LabelRotationAngle="-45">
+          <chart:DateTimeAxis.Title>
+            <chart:ChartAxisTitle Text ="Date"/>
+          </chart:DateTimeAxis.Title>
+          <chart:DateTimeAxis.LabelStyle>
+            <chart:ChartAxisLabelStyle LabelFormat = "MM/dd/yyyy"/>
+          </chart:DateTimeAxis.LabelStyle>
+       </chart:DateTimeAxis>
+      </chart:SfChart.PrimaryAxis>
+
+      <chart:SfChart.SecondaryAxis>
+        <chart:NumericalAxis Minimum="0" Maximum="250" Interval="50">
+          <chart:NumericalAxis.Title>
+            <chart:ChartAxisTitle Text ="Price in Dollar"/>
+          </chart:NumericalAxis.Title>
+          <chart:NumericalAxis.LabelStyle>
+            <chart:ChartAxisLabelStyle LabelFormat = "$##.##"/>
+          </chart:NumericalAxis.LabelStyle>
+        </chart:NumericalAxis>
+      </chart:SfChart.SecondaryAxis>
+
+      <chart:SfChart.Series>
+        <chart:CandleSeries ItemsSource="{Binding FinancialData}" XBindingPath="date" High="High" Low="Low" Open="Value" Close="Size"  EnableTooltip="True" EnableAnimation="True">
+          <chart:CandleSeries.TooltipTemplate>
+            <OnPlatform x:TypeArguments="DataTemplate">
+              <OnPlatform.WinPhone>
+                <DataTemplate>
+                  <Grid HorizontalOptions="Fill" VerticalOptions="Fill" BackgroundColor="#C1272D" Padding="5">
+                    <Grid.RowDefinitions>
+                      <RowDefinition/>
+                      <RowDefinition/>
+                      <RowDefinition/>
+                      <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                      <ColumnDefinition/>
+                      <ColumnDefinition Width="Auto"/>
+                      <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="High" HorizontalTextAlignment="Start" TextColor="White" FontFamily="Helvetica"  FontSize = "12" Grid.Row="0" Grid.Column='0'/>
+                    <Label Text=" : " HorizontalTextAlignment="Start" TextColor="White" FontFamily="Helvetica"  FontSize = "12" Grid.Row="0" Grid.Column='1' />
+                    <Label Text="{Binding High}" HorizontalTextAlignment="Start" TextColor="White" FontFamily="Helvetica" FontSize = "15" Grid.Row="0" Grid.Column='2' />
+
+                    <Label Text="Low" HorizontalTextAlignment="Start" TextColor="White" FontFamily="Helvetica"  FontSize = "12" Grid.Row="1" Grid.Column='0' />
+                    <Label Text=" : " HorizontalTextAlignment="Start" TextColor="White" FontFamily="Helvetica"  FontSize = "12" Grid.Row="1" Grid.Column='1' />
+                    <Label Text="{Binding Low}" HorizontalTextAlignment="Start" TextColor="White" FontFamily="Helvetica" FontSize = "15" Grid.Row="1"  Grid.Column='2' />
+
+                    <Label Text="Open" HorizontalTextAlignment="Start" TextColor="White" FontFamily="Helvetica"  FontSize = "12"  Grid.Row="2" Grid.Column='0' />
+                    <Label Text=" : " HorizontalTextAlignment="Start" TextColor="White" FontFamily="Helvetica"  FontSize = "12" Grid.Row="2" Grid.Column='1' />
+                    <Label Text="{Binding Value}" HorizontalTextAlignment="Start" TextColor="White" FontFamily="Helvetica" FontSize = "15"  Grid.Row="2" Grid.Column='2' />
+
+                    <Label Text="Close" HorizontalTextAlignment="Start" TextColor="White" FontFamily="Helvetica"  FontSize = "12" Grid.Row="3" Grid.Column='0' />
+                    <Label Text=" : " HorizontalTextAlignment="Start" TextColor="White" FontFamily="Helvetica"  FontSize = "12" Grid.Row="3" Grid.Column='1' />
+                    <Label Text="{Binding Size}" HorizontalTextAlignment="Start" TextColor="White" FontFamily="Helvetica" FontSize = "15"  Grid.Row="3" Grid.Column='2' />
+                  </Grid>
+                </DataTemplate>
+              </OnPlatform.WinPhone>
+            </OnPlatform>
+          </chart:CandleSeries.TooltipTemplate>
+        </chart:CandleSeries>
+      </chart:SfChart.Series>
+
+    </chart:SfChart>
+
+  </local:SamplePage.ContentView>
+
+</local:SamplePage>
